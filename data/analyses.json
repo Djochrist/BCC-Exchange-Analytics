@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-10-04T02:32:28+00:00",
+  "current_series": {
+    "source": "Banque Centrale du Congo",
+    "observations": 1653,
+    "start": "2017-01-02",
+    "last_observation": {
+      "date": "2026-10-02",
+      "value": 2265.0
+    }
+  },
+  "technical_snapshot": {
+    "ema_20": 2266.4407890097427,
+    "ema_50": 2264.0043373878843,
+    "ema_gap_20_50": 0.0010761691493355041,
+    "rsi_14": 49.32066602210464,
+    "momentum_10_pct": -0.08513716788783876,
+    "momentum_20_pct": -0.0692676599443276,
+    "macd": 1.4290365027322878,
+    "macd_hist": -0.2685661649017752,
+    "volatility_20_pct": 0.22062639856282648,
+    "range_position_20": 0.18879056047196768,
+    "ema_signal": 0
+  },
+  "xgboost": {
+    "generated_at": "2026-10-04T03:58:10",
+    "trained_through": "2026-09-24",
+    "new_observations_since_training": 3,
+    "last_observation": {
+      "date": "2026-09-24",
+      "value": 2268.05
+    },
+    "selected_model": {
+      "h5": "naive",
+      "h10": "naive",
+      "h20": "naive"
+    },
+    "metrics": {
+      "h5": {
+        "walk_forward_ratio": 0.9386832515823984,
+        "test_ratio": 1.0256851174126698,
+        "mae_xgboost": 32.336100952929876,
+        "mae_naive": 31.5263431280927,
+        "rmse_xgboost": 58.3001374462413,
+        "rmse_naive": 53.70738535934462,
+        "directional_accuracy": 0.5434173669467787,
+        "selected_model": "naive",
+        "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "test_period": null
+      },
+      "h10": {
+        "walk_forward_ratio": 0.9367621033385859,
+        "test_ratio": 1.0541744095723378,
+        "mae_xgboost": 45.67871358928703,
+        "mae_naive": 43.33126774327426,
+        "rmse_xgboost": 88.24218925263591,
+        "rmse_naive": 80.74051961355316,
+        "directional_accuracy": 0.5042735042735043,
+        "selected_model": "naive",
+        "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "test_period": null
+      },
+      "h20": {
+        "walk_forward_ratio": 1.086544229339011,
+        "test_ratio": 1.0596903814735976,
+        "mae_xgboost": 70.72732976242868,
+        "mae_naive": 66.74339127630448,
+        "rmse_xgboost": 141.7985501691916,
+        "rmse_naive": 133.4489780656047,
+        "directional_accuracy": 0.5276967930029155,
+        "selected_model": "naive",
+        "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "test_period": null
+      }
+    },
+    "features_top": {
+      "h5": [
+        {
+          "feature": "rolling_std_5",
+          "perm_importance_mae_cdf": 0.1349186292788644,
+          "perm_rank": 1
+        },
+        {
+          "feature": "lag_2_rel",
+          "perm_importance_mae_cdf": 0.1221443957767725,
+          "perm_rank": 2
+        },
+        {
+          "feature": "rolling_std_20",
+          "perm_importance_mae_cdf": 0.0649238647232785,
+          "perm_rank": 3
+        },
+        {
+          "feature": "rolling_std_30",
+          "perm_importance_mae_cdf": 0.0461031331117133,
+          "perm_rank": 4
+        },
+        {
+          "feature": "quarter",
+          "perm_importance_mae_cdf": 0.0007741748471609,
+          "perm_rank": 5
+        },
+        {
+          "feature": "lag_5_rel",
+          "perm_importance_mae_cdf": 0.0001171038578426,
+          "perm_rank": 6
+        }
+      ],
+      "h10": [
+        {
+          "feature": "rolling_std_30",
+          "perm_importance_mae_cdf": 0.2671789434204811,
+          "perm_rank": 1
+        },
+        {
+          "feature": "lag_3_rel",
+          "perm_importance_mae_cdf": 0.1873266875265493,
+          "perm_rank": 2
+        },
+        {
+          "feature": "rolling_std_5",
+          "perm_importance_mae_cdf": 0.1738920379139877,
+          "perm_rank": 3
+        },
+        {
+          "feature": "rolling_std_20",
+          "perm_importance_mae_cdf": 0.1519179869217538,
+          "perm_rank": 4
+        },
+        {
+          "feature": "rolling_mean_20_rel",
+          "perm_importance_mae_cdf": 0.1452363853793571,
+          "perm_rank": 5
+        },
+        {
+          "feature": "rolling_mean_30_rel",
+          "perm_importance_mae_cdf": 0.1150463843215995,
+          "perm_rank": 6
+        }
+      ],
+      "h20": [
+        {
+          "feature": "rolling_std_30",
+          "perm_importance_mae_cdf": 1.509816205538121,
+          "perm_rank": 1
+        },
+        {
+          "feature": "rolling_std_5",
+          "perm_importance_mae_cdf": 0.7151568055215691,
+          "perm_rank": 2
+        },
+        {
+          "feature": "rolling_mean_10_rel",
+          "perm_importance_mae_cdf": 0.4269564657651983,
+          "perm_rank": 3
+        },
+        {
+          "feature": "rolling_std_20",
+          "perm_importance_mae_cdf": 0.1977633556431683,
+          "perm_rank": 4
+        },
+        {
+          "feature": "rolling_mean_30_rel",
+          "perm_importance_mae_cdf": 0.1970907600400082,
+          "perm_rank": 5
+        },
+        {
+          "feature": "rolling_mean_3_rel",
+          "perm_importance_mae_cdf": 0.1221250208021828,
+          "perm_rank": 6
+        }
+      ]
+    }
+  },
+  "strategy": {
+    "generated_at": "2026-10-04T02:19:00",
+    "trained_through": "2026-09-24",
+    "new_observations_since_training": 3,
+    "summary": {
+      "h5": {
+        "strategy": "ma",
+        "params": {
+          "fast": 20,
+          "slow": 50,
+          "neutral_band": 0.003
+        },
+        "wf_ratio": 1.0147436522635545,
+        "test_ratio": 0.9982077456073432,
+        "directional_accuracy": 0.546448087431694,
+        "signal_coverage": 0.32098765432098764,
+        "selected_model": "naive"
+      },
+      "h10": {
+        "strategy": "ma",
+        "params": {
+          "fast": 20,
+          "slow": 50,
+          "neutral_band": 0.003
+        },
+        "wf_ratio": 0.9771376813618556,
+        "test_ratio": 0.9987824113676961,
+        "directional_accuracy": 0.5623268698060941,
+        "signal_coverage": 0.32432432432432434,
+        "selected_model": "ma"
+      },
+      "h20": {
+        "strategy": "ma",
+        "params": {
+          "fast": 20,
+          "slow": 50,
+          "neutral_band": 0.003
+        },
+        "wf_ratio": 0.9237596791352358,
+        "test_ratio": 1.0059831745952996,
+        "directional_accuracy": 0.5698005698005698,
+        "signal_coverage": 0.33121019108280253,
+        "selected_model": "naive"
+      }
+    },
+    "forecast": {
+      "h5": {
+        "value": 2268.05,
+        "lower": 2266.225041345953,
+        "upper": 2274.1206389938275,
+        "signal": 0,
+        "strategy": "ma",
+        "model_used": "naive",
+        "expected_return": 0.0
+      },
+      "h10": {
+        "value": 2269.2193071492575,
+        "lower": 2266.177701213158,
+        "upper": 2277.2472354286183,
+        "signal": 0,
+        "strategy": "ma",
+        "model_used": "ma",
+        "expected_return": 0.0005155561602510073
+      },
+      "h20": {
+        "value": 2268.05,
+        "lower": 2266.286043704903,
+        "upper": 2282.4706508306717,
+        "signal": 0,
+        "strategy": "ma",
+        "model_used": "naive",
+        "expected_return": 0.0
+      }
+    }
+  },
+  "data_source": {
+    "official_url": "https://www.bcc.cd/statistiques/secteur-exterieur/cours-de-change",
+    "daily_page_pattern": "https://www.bcc.cd/marche-des-changes/cours-de-change/{YYYY-MM-DD}",
+    "collection": "automatique via scripts/collect_bcc.py + GitHub Actions"
+  }
+}

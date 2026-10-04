@@ -1,0 +1,4 @@
+horizon,strategy,params,wf_mae_ratio,wf_directional_accuracy,holdout_mae_ratio,holdout_directional_accuracy,holdout_signal_coverage,selected_model
+5,ma,"{""fast"": 20, ""slow"": 50, ""neutral_band"": 0.003}",1.0147436522635545,0.7269565217391305,0.9982077456073432,0.546448087431694,0.32098765432098764,naive
+10,ma,"{""fast"": 20, ""slow"": 50, ""neutral_band"": 0.003}",0.9771376813618557,0.7963636363636364,0.9987824113676961,0.5623268698060941,0.32432432432432434,ma
+20,ma,"{""fast"": 20, ""slow"": 50, ""neutral_band"": 0.003}",0.9237596791352358,0.842,1.0059831745952996,0.5698005698005698,0.33121019108280253,naive

@@ -1,0 +1,112 @@
+{
+  "n_rows_input": 2462,
+  "invalid_dates": 0,
+  "missing_values": 0,
+  "non_numeric_values": 0,
+  "non_positive_values": 0,
+  "non_finite_values": 0,
+  "duplicate_dates": 0,
+  "conflicting_duplicate_dates": [],
+  "was_chronological_in_file": true,
+  "spacing": {
+    "gap_days_distribution": {
+      "1": 1919,
+      "2": 32,
+      "3": 477,
+      "4": 27,
+      "5": 6
+    },
+    "median_gap_days": 1.0,
+    "max_gap_days": 5,
+    "weekday_distribution": {
+      "0": 489,
+      "1": 495,
+      "2": 492,
+      "3": 495,
+      "4": 491
+    },
+    "has_weekend_observations": false,
+    "gaps_over_threshold": [],
+    "note": "Les horizons h sont comptés en OBSERVATIONS, pas en jours calendaires."
+  },
+  "anomaly_detection": {
+    "rule": "bloc de 1 à 5 obs. écartées de ≥10% de la valeur avant le bloc, avec retour à ±2% de cette valeur juste après",
+    "policy": "exclude",
+    "n_flagged": 9,
+    "flagged": [
+      {
+        "date": "2017-07-03",
+        "value": 921.2912
+      },
+      {
+        "date": "2017-07-04",
+        "value": 921.6634
+      },
+      {
+        "date": "2017-07-05",
+        "value": 919.769
+      },
+      {
+        "date": "2018-07-02",
+        "value": 916.7248
+      },
+      {
+        "date": "2018-07-03",
+        "value": 921.2912
+      },
+      {
+        "date": "2018-07-04",
+        "value": 921.6634
+      },
+      {
+        "date": "2018-07-05",
+        "value": 919.769
+      },
+      {
+        "date": "2019-07-11",
+        "value": 1446.2553
+      },
+      {
+        "date": "2020-03-16",
+        "value": 1898.5537
+      }
+    ],
+    "limits": "Les 1res/dernières observations ne peuvent pas être validées par ce test (pas de valeur avant/après)."
+  },
+  "extreme_returns_kept": {
+    "threshold_robust_z": 8.0,
+    "n": 259,
+    "by_year": {
+      "2017": 19,
+      "2020": 3,
+      "2023": 95,
+      "2024": 33,
+      "2025": 53,
+      "2026": 56
+    },
+    "note": "CONSERVÉS : correspondent à de vraies phases de volatilité (ex. 2023). Aucune suppression arbitraire."
+  },
+  "repeated_consecutive_values": 56,
+  "last_observation": {
+    "date": "2026-09-24",
+    "value": 2268.05,
+    "change_vs_previous": 0.00024255788313132243,
+    "alert": false
+  },
+  "n_rows_clean": 2453,
+  "n_rows_excluded": 9,
+  "date_min": "2017-01-02",
+  "date_max": "2026-09-24",
+  "value_min": 1215.5887,
+  "value_max": 2887.1813,
+  "modified_values": 0,
+  "interpolated_values": 0,
+  "source": {
+    "path": "/home/kalimement/Documents/MEMOIRE/usdcdf_ml/data/raw/cours-de-change-quotidien.csv",
+    "format": "csv",
+    "date_column": "Date",
+    "value_column": "USD/CDF",
+    "n_columns_in_file": 22,
+    "n_rows_in_file": 2462
+  }
+}

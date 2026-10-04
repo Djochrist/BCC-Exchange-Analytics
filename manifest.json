@@ -1,0 +1,10 @@
+{
+  "name": "USD/CDF | BCC",
+  "short_name": "USD/CDF",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ea",
+  "theme_color": "#0d4638",
+  "description": "Taux USD/CDF, évolution et prévision à court terme."
+}

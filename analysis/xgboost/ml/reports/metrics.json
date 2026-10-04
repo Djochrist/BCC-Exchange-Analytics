@@ -1,0 +1,809 @@
+{
+  "generated_at": "2026-10-04T03:58:10",
+  "target": "USD/CDF",
+  "model": "XGBoost",
+  "protocol": {
+    "horizons_unit": "observations (pas des jours calendaires)",
+    "target": "return_h = value[t+h]/value[t]-1 (prévision directe, un modèle par horizon)",
+    "split": "chronologique ; test final = dernières 15% des observations utilisables",
+    "walk_forward": "fenêtre extensible, 5 plis de 150 obs., gap=h",
+    "hyperparameter_search": "30+1 candidats aléatoires, critère = MAE_xgb/MAE_naive moyen en walk-forward, pool de développement seulement",
+    "baselines": {
+      "naive": "value[t+h] = value[t]",
+      "drift": "tendance des 60 dernières observations prolongée"
+    },
+    "random_shuffle_used": false
+  },
+  "data": {
+    "n_rows_input": 2462,
+    "n_rows_clean": 2453,
+    "n_rows_excluded": 9,
+    "date_min": "2017-01-02",
+    "date_max": "2026-09-24"
+  },
+  "horizons": {
+    "h5": {
+      "horizon_observations": 5,
+      "feature_set": "scale_free",
+      "best_hyperparameters": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.02,
+        "subsample": 1.0,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 20,
+        "reg_alpha": 0.01,
+        "reg_lambda": 10.0,
+        "objective": "reg:absoluteerror"
+      },
+      "samples": {
+        "n_development": 2055,
+        "n_test": 358,
+        "n_all_labeled": 2418,
+        "development_period": [
+          "2017-02-16",
+          "2025-04-14"
+        ],
+        "test_period": [
+          "2025-04-15",
+          "2026-09-24"
+        ]
+      },
+      "walk_forward": {
+        "folds": [
+          {
+            "fold": 1,
+            "validation_start": "2022-04-19",
+            "validation_end": "2022-11-24",
+            "train_start": "2017-02-16",
+            "train_end": "2022-04-11",
+            "train_size": 1300,
+            "n": 150,
+            "mae_xgboost": 0.5005051577586983,
+            "mae_naive": 0.4905383212093269,
+            "score_relatif": 1.0203181609232896
+          },
+          {
+            "fold": 2,
+            "validation_start": "2022-11-18",
+            "validation_end": "2023-07-03",
+            "train_start": "2017-02-16",
+            "train_end": "2022-11-10",
+            "train_size": 1450,
+            "n": 150,
+            "mae_xgboost": 14.409805464046524,
+            "mae_naive": 16.439769333333324,
+            "score_relatif": 0.876521146487692
+          },
+          {
+            "fold": 3,
+            "validation_start": "2023-06-26",
+            "validation_end": "2024-02-06",
+            "train_start": "2017-02-16",
+            "train_end": "2023-06-16",
+            "train_size": 1600,
+            "n": 150,
+            "mae_xgboost": 36.3094309680303,
+            "mae_naive": 39.73807607908772,
+            "score_relatif": 0.9137188950911049
+          },
+          {
+            "fold": 4,
+            "validation_start": "2024-01-31",
+            "validation_end": "2024-09-06",
+            "train_start": "2017-02-16",
+            "train_end": "2024-01-23",
+            "train_size": 1750,
+            "n": 150,
+            "mae_xgboost": 11.120954311944555,
+            "mae_naive": 10.696735314814005,
+            "score_relatif": 1.0396587355529912
+          },
+          {
+            "fold": 5,
+            "validation_start": "2024-09-02",
+            "validation_end": "2025-04-14",
+            "train_start": "2017-02-16",
+            "train_end": "2024-08-23",
+            "train_size": 1900,
+            "n": 150,
+            "mae_xgboost": 7.172734422070322,
+            "mae_naive": 8.506570455117881,
+            "score_relatif": 0.8431993198569147
+          }
+        ],
+        "score_relatif_mean": 0.9386832515823984,
+        "score_relatif_std": 0.07805745884766878,
+        "n_folds_better_than_naive": 3,
+        "pooled": {
+          "xgboost": {
+            "n": 750,
+            "mae": 13.902686064770082,
+            "rmse": 31.939704600983504,
+            "mape_pct": 0.554967311297742,
+            "smape_pct": 0.5544598493976995,
+            "bias": 1.1280387785498864,
+            "r2_level": 0.9918620441025287,
+            "r2_return": 0.0241497813447048,
+            "r2_oos_vs_naive": 0.05610933071401991,
+            "directional_accuracy": 0.6866666666666666,
+            "mae_ratio_vs_naive": 0.9161972110900033,
+            "rmse_ratio_vs_naive": 0.9780940066224144
+          },
+          "naive": {
+            "n": 750,
+            "mae": 15.17433790071245,
+            "rmse": 32.655045818426714,
+            "mape_pct": 0.6046332560100937,
+            "smape_pct": 0.6069374390498397,
+            "bias": -5.701458666666666,
+            "r2_level": 0.991493436731447,
+            "r2_return": -0.033859376312609824,
+            "r2_oos_vs_naive": 0.0,
+            "directional_accuracy": NaN,
+            "mae_ratio_vs_naive": 1.0,
+            "rmse_ratio_vs_naive": 1.0
+          },
+          "drift": {
+            "n": 750,
+            "mae": 14.902146768790292,
+            "rmse": 33.446757210765654,
+            "mape_pct": 0.5940314979645329,
+            "smape_pct": 0.5934270188567494,
+            "bias": 0.2418750385867364,
+            "r2_level": 0.9910759585898616,
+            "r2_return": -0.06619835851452649,
+            "r2_oos_vs_naive": -0.031279865466092405,
+            "directional_accuracy": 0.648,
+            "mae_ratio_vs_naive": 0.9820624047188656,
+            "rmse_ratio_vs_naive": 1.0242446878421523
+          }
+        }
+      },
+      "holdout": {
+        "models": {
+          "xgboost": {
+            "n": 358,
+            "mae": 32.336100952929876,
+            "rmse": 58.3001374462413,
+            "mape_pct": 1.3947074628292153,
+            "smape_pct": 1.370359803877947,
+            "bias": 18.217127155246853,
+            "r2_level": 0.9579252624022216,
+            "r2_return": -0.15144119399624945,
+            "r2_oos_vs_naive": -0.13188963912073048,
+            "directional_accuracy": 0.5434173669467787,
+            "mae_ratio_vs_naive": 1.0256851174126698,
+            "rmse_ratio_vs_naive": 1.0855143488398766
+          },
+          "naive": {
+            "n": 358,
+            "mae": 31.5263431280927,
+            "rmse": 53.70738535934462,
+            "mape_pct": 1.363529634646993,
+            "smape_pct": 1.3494737856338985,
+            "bias": 8.225877374301675,
+            "r2_level": 0.9642932535996038,
+            "r2_return": -0.017273375601093877,
+            "r2_oos_vs_naive": 0.0,
+            "directional_accuracy": NaN,
+            "mae_ratio_vs_naive": 1.0,
+            "rmse_ratio_vs_naive": 1.0
+          },
+          "drift": {
+            "n": 358,
+            "mae": 34.54030815646594,
+            "rmse": 54.5013607583137,
+            "mape_pct": 1.499062078173133,
+            "smape_pct": 1.4948510155794477,
+            "bias": 1.0832220601969298,
+            "r2_level": 0.9632297188862223,
+            "r2_return": -0.08947903566964577,
+            "r2_oos_vs_naive": -0.07097960273057025,
+            "directional_accuracy": 0.4481792717086835,
+            "mae_ratio_vs_naive": 1.0956014789323134,
+            "rmse_ratio_vs_naive": 1.0147833560255588
+          }
+        },
+        "score_relatif": 1.0256851174126698,
+        "score_relatif_rmse": 1.0855143488398766,
+        "diebold_mariano_mae": {
+          "statistic": 0.6825817197686813,
+          "p_value_two_sided": 0.4953138549325584,
+          "p_value_xgb_better_one_sided": 0.7523430725337208,
+          "mean_loss_diff": 0.8097578248371725,
+          "n": 358
+        },
+        "diebold_mariano_mse": {
+          "statistic": 1.6254635251452572,
+          "p_value_two_sided": 0.1049462515027837,
+          "p_value_xgb_better_one_sided": 0.9475268742486082,
+          "mean_loss_diff": 514.4227841134822,
+          "n": 358
+        },
+        "bootstrap_mae_ratio": {
+          "ci_level": 0.9,
+          "lower": 0.9469286434237019,
+          "upper": 1.0893290428160267,
+          "block_length": 10,
+          "n_boot": 2000,
+          "prob_ratio_below_1": 0.313
+        }
+      },
+      "intervals": {
+        "nominal_level": 0.9,
+        "method_deployed": "conformal_normalized",
+        "coverage_on_holdout_calibrated_on_walk_forward": {
+          "xgboost": {
+            "conformal_normalized": {
+              "empirical_coverage": 0.8296089385474861,
+              "mean_width_cdf": 109.99072175074058,
+              "n": 358
+            },
+            "conformal_absolute": {
+              "empirical_coverage": 0.7206703910614525,
+              "mean_width_cdf": 66.07582261747213,
+              "n": 358
+            }
+          },
+          "naive": {
+            "conformal_normalized": {
+              "empirical_coverage": 0.8379888268156425,
+              "mean_width_cdf": 117.13131062458852,
+              "n": 358
+            },
+            "conformal_absolute": {
+              "empirical_coverage": 0.7206703910614525,
+              "mean_width_cdf": 77.80677944831403,
+              "n": 358
+            }
+          }
+        },
+        "calibration_deploy": {
+          "xgboost": {
+            "n_calibration": 1108,
+            "level_nominal": 0.9,
+            "q_abs": 0.023975061647462326,
+            "sigma_floor": 0.0003755064524766645,
+            "q_norm": 1.4498951255585062
+          },
+          "naive": {
+            "n_calibration": 1108,
+            "level_nominal": 0.9,
+            "q_abs": 0.024386490158710084,
+            "sigma_floor": 0.0003755064524766645,
+            "q_norm": 1.4165402027621545
+          }
+        }
+      },
+      "selection": {
+        "selected_model": "naive",
+        "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "statistically_significant": false,
+        "rule": "xgboost si score_relatif<1 en walk-forward ET en test final"
+      }
+    },
+    "h10": {
+      "horizon_observations": 10,
+      "feature_set": "scale_free",
+      "best_hyperparameters": {
+        "n_estimators": 500,
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 20,
+        "reg_alpha": 0.001,
+        "reg_lambda": 10.0,
+        "objective": "reg:absoluteerror"
+      },
+      "samples": {
+        "n_development": 2050,
+        "n_test": 353,
+        "n_all_labeled": 2413,
+        "development_period": [
+          "2017-02-16",
+          "2025-04-14"
+        ],
+        "test_period": [
+          "2025-04-15",
+          "2026-09-24"
+        ]
+      },
+      "walk_forward": {
+        "folds": [
+          {
+            "fold": 1,
+            "validation_start": "2022-04-12",
+            "validation_end": "2022-11-24",
+            "train_start": "2017-02-16",
+            "train_end": "2022-03-28",
+            "train_size": 1290,
+            "n": 150,
+            "mae_xgboost": 0.7640678280805226,
+            "mae_naive": 0.7752992825721366,
+            "score_relatif": 0.9855133949636166
+          },
+          {
+            "fold": 2,
+            "validation_start": "2022-11-11",
+            "validation_end": "2023-07-03",
+            "train_start": "2017-02-16",
+            "train_end": "2022-10-27",
+            "train_size": 1440,
+            "n": 150,
+            "mae_xgboost": 23.91030216194397,
+            "mae_naive": 26.978269999999995,
+            "score_relatif": 0.8862800380433576
+          },
+          {
+            "fold": 3,
+            "validation_start": "2023-06-19",
+            "validation_end": "2024-02-06",
+            "train_start": "2017-02-16",
+            "train_end": "2023-06-02",
+            "train_size": 1590,
+            "n": 150,
+            "mae_xgboost": 44.70415256467278,
+            "mae_naive": 49.89492062876039,
+            "score_relatif": 0.8959660021766715
+          },
+          {
+            "fold": 4,
+            "validation_start": "2024-01-24",
+            "validation_end": "2024-09-06",
+            "train_start": "2017-02-16",
+            "train_end": "2024-01-05",
+            "train_size": 1740,
+            "n": 150,
+            "mae_xgboost": 14.962054210135975,
+            "mae_naive": 14.554346310846022,
+            "score_relatif": 1.0280127936069603
+          },
+          {
+            "fold": 5,
+            "validation_start": "2024-08-26",
+            "validation_end": "2025-04-14",
+            "train_start": "2017-02-16",
+            "train_end": "2024-08-09",
+            "train_size": 1890,
+            "n": 150,
+            "mae_xgboost": 9.409368045112693,
+            "mae_naive": 10.595678331999615,
+            "score_relatif": 0.8880382879023243
+          }
+        ],
+        "score_relatif_mean": 0.9367621033385859,
+        "score_relatif_std": 0.05880501319907225,
+        "n_folds_better_than_naive": 4,
+        "pooled": {
+          "xgboost": {
+            "n": 750,
+            "mae": 18.74998896198919,
+            "rmse": 39.3576032304298,
+            "mape_pct": 0.7516428928609031,
+            "smape_pct": 0.7528075401246205,
+            "bias": 0.7827895515285497,
+            "r2_level": 0.9876430631276631,
+            "r2_return": 0.0022953153211997535,
+            "r2_oos_vs_naive": 0.0807773403159161,
+            "directional_accuracy": 0.7226666666666667,
+            "mae_ratio_vs_naive": 0.9119776216273696,
+            "rmse_ratio_vs_naive": 0.9683407080268112
+          },
+          "naive": {
+            "n": 750,
+            "mae": 20.559702910835632,
+            "rmse": 40.64437537757638,
+            "mape_pct": 0.8216260376457514,
+            "smape_pct": 0.8292754952515861,
+            "bias": -11.418569333333332,
+            "r2_level": 0.9868218499277802,
+            "r2_return": -0.08537868836010731,
+            "r2_oos_vs_naive": 0.0,
+            "directional_accuracy": NaN,
+            "mae_ratio_vs_naive": 1.0,
+            "rmse_ratio_vs_naive": 1.0
+          },
+          "drift": {
+            "n": 750,
+            "mae": 19.548673617843864,
+            "rmse": 41.845816266188855,
+            "mape_pct": 0.7821674117912033,
+            "smape_pct": 0.7825785352595446,
+            "bias": 0.5049001050918132,
+            "r2_level": 0.9860312472839442,
+            "r2_return": -0.11725448771853686,
+            "r2_oos_vs_naive": -0.029368366727921202,
+            "directional_accuracy": 0.72,
+            "mae_ratio_vs_naive": 0.9508247129165022,
+            "rmse_ratio_vs_naive": 1.0295598315253065
+          }
+        }
+      },
+      "holdout": {
+        "models": {
+          "xgboost": {
+            "n": 353,
+            "mae": 45.67871358928703,
+            "rmse": 88.24218925263591,
+            "mape_pct": 1.969734051185163,
+            "smape_pct": 1.9079638395340353,
+            "bias": 30.92407670986116,
+            "r2_level": 0.9019098194783297,
+            "r2_return": -0.21108664218508588,
+            "r2_oos_vs_naive": -0.16911487596206798,
+            "directional_accuracy": 0.5042735042735043,
+            "mae_ratio_vs_naive": 1.0541744095723378,
+            "rmse_ratio_vs_naive": 1.0929108417308664
+          },
+          "naive": {
+            "n": 353,
+            "mae": 43.33126774327426,
+            "rmse": 80.74051961355316,
+            "mape_pct": 1.8676146501267488,
+            "smape_pct": 1.8252908314010625,
+            "bias": 16.66916292353606,
+            "r2_level": 0.9178786527946721,
+            "r2_return": -0.03590046374910694,
+            "r2_oos_vs_naive": 0.0,
+            "directional_accuracy": NaN,
+            "mae_ratio_vs_naive": 1.0,
+            "rmse_ratio_vs_naive": 1.0
+          },
+          "drift": {
+            "n": 353,
+            "mae": 50.165056088339014,
+            "rmse": 83.63953632214803,
+            "mape_pct": 2.1716290090045933,
+            "smape_pct": 2.15679164189861,
+            "bias": 2.3436287341818023,
+            "r2_level": 0.9118755908104822,
+            "r2_return": -0.1983944841490184,
+            "r2_oos_vs_naive": -0.15686258099722883,
+            "directional_accuracy": 0.47293447293447294,
+            "mae_ratio_vs_naive": 1.1577103256141281,
+            "rmse_ratio_vs_naive": 1.0359053511479785
+          }
+        },
+        "score_relatif": 1.0541744095723378,
+        "score_relatif_rmse": 1.0929108417308664,
+        "diebold_mariano_mae": {
+          "statistic": 1.1733224264994724,
+          "p_value_two_sided": 0.2414598576574274,
+          "p_value_xgb_better_one_sided": 0.8792700711712863,
+          "mean_loss_diff": 2.347445846012771,
+          "n": 353
+        },
+        "diebold_mariano_mse": {
+          "statistic": 1.4248038968150065,
+          "p_value_two_sided": 0.15509989646282052,
+          "p_value_xgb_better_one_sided": 0.9224500517685897,
+          "mean_loss_diff": 1267.6524566314515,
+          "n": 353
+        },
+        "bootstrap_mae_ratio": {
+          "ci_level": 0.9,
+          "lower": 0.9787446265130976,
+          "upper": 1.107141542761244,
+          "block_length": 10,
+          "n_boot": 2000,
+          "prob_ratio_below_1": 0.113
+        }
+      },
+      "intervals": {
+        "nominal_level": 0.9,
+        "method_deployed": "conformal_normalized",
+        "coverage_on_holdout_calibrated_on_walk_forward": {
+          "xgboost": {
+            "conformal_normalized": {
+              "empirical_coverage": 0.8186968838526912,
+              "mean_width_cdf": 171.20730699035383,
+              "n": 353
+            },
+            "conformal_absolute": {
+              "empirical_coverage": 0.7138810198300283,
+              "mean_width_cdf": 88.55868049121324,
+              "n": 353
+            }
+          },
+          "naive": {
+            "conformal_normalized": {
+              "empirical_coverage": 0.8526912181303116,
+              "mean_width_cdf": 166.4941766649067,
+              "n": 353
+            },
+            "conformal_absolute": {
+              "empirical_coverage": 0.7450424929178471,
+              "mean_width_cdf": 106.601267923782,
+              "n": 353
+            }
+          }
+        },
+        "calibration_deploy": {
+          "xgboost": {
+            "n_calibration": 1103,
+            "level_nominal": 0.9,
+            "q_abs": 0.030407089801242293,
+            "sigma_floor": 0.0005307740757575239,
+            "q_norm": 1.6046666952981141
+          },
+          "naive": {
+            "n_calibration": 1103,
+            "level_nominal": 0.9,
+            "q_abs": 0.03271924748735122,
+            "sigma_floor": 0.0005307740757575239,
+            "q_norm": 1.3656529041993146
+          }
+        }
+      },
+      "selection": {
+        "selected_model": "naive",
+        "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "statistically_significant": false,
+        "rule": "xgboost si score_relatif<1 en walk-forward ET en test final"
+      }
+    },
+    "h20": {
+      "horizon_observations": 20,
+      "feature_set": "scale_free",
+      "best_hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.02,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 1,
+        "reg_alpha": 0.01,
+        "reg_lambda": 5.0,
+        "objective": "reg:absoluteerror"
+      },
+      "samples": {
+        "n_development": 2040,
+        "n_test": 343,
+        "n_all_labeled": 2403,
+        "development_period": [
+          "2017-02-16",
+          "2025-04-14"
+        ],
+        "test_period": [
+          "2025-04-15",
+          "2026-09-24"
+        ]
+      },
+      "walk_forward": {
+        "folds": [
+          {
+            "fold": 1,
+            "validation_start": "2022-03-29",
+            "validation_end": "2022-11-24",
+            "train_start": "2017-02-16",
+            "train_end": "2022-02-28",
+            "train_size": 1270,
+            "n": 150,
+            "mae_xgboost": 1.4308723777497896,
+            "mae_naive": 1.4783940000000029,
+            "score_relatif": 0.9678559151009722
+          },
+          {
+            "fold": 2,
+            "validation_start": "2022-10-28",
+            "validation_end": "2023-07-03",
+            "train_start": "2017-02-16",
+            "train_end": "2022-09-29",
+            "train_size": 1420,
+            "n": 150,
+            "mae_xgboost": 47.67567075238551,
+            "mae_naive": 48.37766066666667,
+            "score_relatif": 0.9854893786800061
+          },
+          {
+            "fold": 3,
+            "validation_start": "2023-06-05",
+            "validation_end": "2024-02-06",
+            "train_start": "2017-02-16",
+            "train_end": "2023-05-04",
+            "train_size": 1570,
+            "n": 150,
+            "mae_xgboost": 51.71774759495615,
+            "mae_naive": 64.66579812721132,
+            "score_relatif": 0.7997697251523347
+          },
+          {
+            "fold": 4,
+            "validation_start": "2024-01-08",
+            "validation_end": "2024-09-06",
+            "train_start": "2017-02-16",
+            "train_end": "2023-12-05",
+            "train_size": 1720,
+            "n": 150,
+            "mae_xgboost": 26.114332014097037,
+            "mae_naive": 21.871825674680135,
+            "score_relatif": 1.193971294510098
+          },
+          {
+            "fold": 5,
+            "validation_start": "2024-08-12",
+            "validation_end": "2025-04-14",
+            "train_start": "2017-02-16",
+            "train_end": "2024-07-11",
+            "train_size": 1870,
+            "n": 150,
+            "mae_xgboost": 15.970378676876472,
+            "mae_naive": 10.74986821756308,
+            "score_relatif": 1.4856348332516438
+          }
+        ],
+        "score_relatif_mean": 1.086544229339011,
+        "score_relatif_std": 0.23552176098718275,
+        "n_folds_better_than_naive": 3,
+        "pooled": {
+          "xgboost": {
+            "n": 750,
+            "mae": 28.581800283212996,
+            "rmse": 52.19947795346401,
+            "mape_pct": 1.1444192438379572,
+            "smape_pct": 1.158434276061671,
+            "bias": -3.1757126863067486,
+            "r2_level": 0.97826368792021,
+            "r2_return": -0.028037211104350535,
+            "r2_oos_vs_naive": 0.13088450052537393,
+            "directional_accuracy": 0.7706666666666667,
+            "mae_ratio_vs_naive": 0.9712216718610899,
+            "rmse_ratio_vs_naive": 0.933864964523191
+          },
+          "naive": {
+            "n": 750,
+            "mae": 29.428709337224245,
+            "rmse": 55.89617336176201,
+            "mape_pct": 1.180498368944468,
+            "smape_pct": 1.2045888283190354,
+            "bias": -22.858022133333336,
+            "r2_level": 0.9750760026747255,
+            "r2_return": -0.1828545362794607,
+            "r2_oos_vs_naive": 0.0,
+            "directional_accuracy": NaN,
+            "mae_ratio_vs_naive": 1.0,
+            "rmse_ratio_vs_naive": 1.0
+          },
+          "drift": {
+            "n": 750,
+            "mae": 29.229039770355893,
+            "rmse": 58.548833925580354,
+            "mape_pct": 1.1770987558156487,
+            "smape_pct": 1.1831398961311232,
+            "bias": 1.0516545483048079,
+            "r2_level": 0.9726542372550361,
+            "r2_return": -0.24178698542880395,
+            "r2_oos_vs_naive": -0.049822228635744814,
+            "directional_accuracy": 0.752,
+            "mae_ratio_vs_naive": 0.9932151436007494,
+            "rmse_ratio_vs_naive": 1.0474569260162092
+          }
+        }
+      },
+      "holdout": {
+        "models": {
+          "xgboost": {
+            "n": 343,
+            "mae": 70.72732976242868,
+            "rmse": 141.7985501691916,
+            "mape_pct": 3.0847725088846625,
+            "smape_pct": 2.913838166919301,
+            "bias": 56.523899168754426,
+            "r2_level": 0.7365012861578228,
+            "r2_return": -0.19734781635284349,
+            "r2_oos_vs_naive": -0.12777059467654794,
+            "directional_accuracy": 0.5276967930029155,
+            "mae_ratio_vs_naive": 1.0596903814735976,
+            "rmse_ratio_vs_naive": 1.0625675237429106
+          },
+          "naive": {
+            "n": 343,
+            "mae": 66.74339127630448,
+            "rmse": 133.4489780656047,
+            "mape_pct": 2.903990444456148,
+            "smape_pct": 2.7682786405178827,
+            "bias": 34.33043480337711,
+            "r2_level": 0.7666190390729306,
+            "r2_return": -0.0616944811335951,
+            "r2_oos_vs_naive": 0.0,
+            "directional_accuracy": NaN,
+            "mae_ratio_vs_naive": 1.0,
+            "rmse_ratio_vs_naive": 1.0
+          },
+          "drift": {
+            "n": 343,
+            "mae": 87.70549762007418,
+            "rmse": 144.4646567819623,
+            "mape_pct": 3.8398429367118374,
+            "smape_pct": 3.7829523774608194,
+            "bias": 5.649572636072245,
+            "r2_level": 0.7264994908251678,
+            "r2_return": -0.39507509801778573,
+            "r2_oos_vs_naive": -0.31400805298359735,
+            "directional_accuracy": 0.46938775510204084,
+            "mae_ratio_vs_naive": 1.3140701415214386,
+            "rmse_ratio_vs_naive": 1.0825459953012317
+          }
+        },
+        "score_relatif": 1.0596903814735976,
+        "score_relatif_rmse": 1.0625675237429106,
+        "diebold_mariano_mae": {
+          "statistic": 1.063497522804594,
+          "p_value_two_sided": 0.2883067145102203,
+          "p_value_xgb_better_one_sided": 0.8558466427448899,
+          "mean_loss_diff": 3.9839384861242086,
+          "n": 343
+        },
+        "diebold_mariano_mse": {
+          "statistic": 1.3483811705531652,
+          "p_value_two_sided": 0.1784280994432892,
+          "p_value_xgb_better_one_sided": 0.9107859502783554,
+          "mean_loss_diff": 2298.1990833305026,
+          "n": 343
+        },
+        "bootstrap_mae_ratio": {
+          "ci_level": 0.9,
+          "lower": 0.968656887348638,
+          "upper": 1.1450801509748725,
+          "block_length": 20,
+          "n_boot": 2000,
+          "prob_ratio_below_1": 0.128
+        }
+      },
+      "intervals": {
+        "nominal_level": 0.9,
+        "method_deployed": "conformal_normalized",
+        "coverage_on_holdout_calibrated_on_walk_forward": {
+          "xgboost": {
+            "conformal_normalized": {
+              "empirical_coverage": 0.8104956268221575,
+              "mean_width_cdf": 307.0465144512224,
+              "n": 343
+            },
+            "conformal_absolute": {
+              "empirical_coverage": 0.7580174927113703,
+              "mean_width_cdf": 154.28222913000158,
+              "n": 343
+            }
+          },
+          "naive": {
+            "conformal_normalized": {
+              "empirical_coverage": 0.8367346938775511,
+              "mean_width_cdf": 323.0620496629056,
+              "n": 343
+            },
+            "conformal_absolute": {
+              "empirical_coverage": 0.8017492711370262,
+              "mean_width_cdf": 168.7790925657921,
+              "n": 343
+            }
+          }
+        },
+        "calibration_deploy": {
+          "xgboost": {
+            "n_calibration": 1093,
+            "level_nominal": 0.9,
+            "q_abs": 0.04146249448449124,
+            "sigma_floor": 0.0007477900117787752,
+            "q_norm": 1.9176855491148863
+          },
+          "naive": {
+            "n_calibration": 1093,
+            "level_nominal": 0.9,
+            "q_abs": 0.0419228976649304,
+            "sigma_floor": 0.0007477900117787752,
+            "q_norm": 2.230890850772827
+          }
+        }
+      },
+      "selection": {
+        "selected_model": "naive",
+        "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "statistically_significant": false,
+        "rule": "xgboost si score_relatif<1 en walk-forward ET en test final"
+      }
+    }
+  }
+}

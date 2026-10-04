@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026-10-04T02:19:00",
+  "model": "strategy_search_walk_forward",
+  "target": "USD/CDF",
+  "last_observation": {
+    "date": "2026-09-24",
+    "value": 2268.05
+  },
+  "test_start": "2024-10-09",
+  "selected_model": {
+    "h5": "naive",
+    "h10": "ma",
+    "h20": "naive"
+  },
+  "strategies": {
+    "h5": {
+      "strategy": "ma",
+      "params": {
+        "fast": 20,
+        "slow": 50,
+        "neutral_band": 0.003
+      },
+      "expected_returns": {
+        "-1": 0.0,
+        "0": 0.0002408135982038262,
+        "1": 0.002425127737138766
+      },
+      "holdout": {
+        "mae": 25.43438294435507,
+        "mae_naive": 25.480049675310763,
+        "mae_ratio": 0.9982077456073432,
+        "rmse": 46.68053333079459,
+        "rmse_naive": 46.56733312623405,
+        "rmse_ratio": 1.002430893009348,
+        "directional_accuracy": 0.546448087431694,
+        "signal_coverage": 0.32098765432098764,
+        "n": 486
+      },
+      "selected_model": "naive"
+    },
+    "h10": {
+      "strategy": "ma",
+      "params": {
+        "fast": 20,
+        "slow": 50,
+        "neutral_band": 0.003
+      },
+      "expected_returns": {
+        "-1": 0.0,
+        "0": 0.0005185633476985085,
+        "1": 0.004692968316333035
+      },
+      "holdout": {
+        "mae": 34.42121454470227,
+        "mae_naive": 34.463176516662045,
+        "mae_ratio": 0.9987824113676961,
+        "rmse": 69.84652525076307,
+        "rmse_naive": 69.55979322984618,
+        "rmse_ratio": 1.004122094209933,
+        "directional_accuracy": 0.5623268698060941,
+        "signal_coverage": 0.32432432432432434,
+        "n": 481
+      },
+      "selected_model": "ma"
+    },
+    "h20": {
+      "strategy": "ma",
+      "params": {
+        "fast": 20,
+        "slow": 50,
+        "neutral_band": 0.003
+      },
+      "expected_returns": {
+        "-1": 0.0,
+        "0": 0.001084163166864327,
+        "1": 0.00781111803960477
+      },
+      "holdout": {
+        "mae": 51.5854196410682,
+        "mae_naive": 51.27861075988738,
+        "mae_ratio": 1.0059831745952996,
+        "rmse": 114.78379103214417,
+        "rmse_naive": 114.10920558840193,
+        "rmse_ratio": 1.0059117530462485,
+        "directional_accuracy": 0.5698005698005698,
+        "signal_coverage": 0.33121019108280253,
+        "n": 471
+      },
+      "selected_model": "naive"
+    }
+  },
+  "forecast": {
+    "h5": {
+      "value": 2268.05,
+      "lower": 2266.225041345953,
+      "upper": 2274.1206389938275,
+      "signal": 0,
+      "strategy": "ma",
+      "model_used": "naive",
+      "expected_return": 0.0
+    },
+    "h10": {
+      "value": 2269.2193071492575,
+      "lower": 2266.177701213158,
+      "upper": 2277.2472354286183,
+      "signal": 0,
+      "strategy": "ma",
+      "model_used": "ma",
+      "expected_return": 0.0005155561602510073
+    },
+    "h20": {
+      "value": 2268.05,
+      "lower": 2266.286043704903,
+      "upper": 2282.4706508306717,
+      "signal": 0,
+      "strategy": "ma",
+      "model_used": "naive",
+      "expected_return": 0.0
+    }
+  },
+  "disclaimer": "Les signaux techniques ne garantissent pas une évolution future. La sélection est validée hors échantillon et peut changer avec de nouvelles données."
+}

@@ -1,0 +1,12 @@
+{
+  "method": "pages quotidiennes officielles BCC",
+  "endpoint_pattern": "https://www.bcc.cd/marche-des-changes/cours-de-change/{YYYY-MM-DD}",
+  "checked_at": null,
+  "window_start": null,
+  "window_end": null,
+  "calendar_days_attempted": 0,
+  "observations_added": 0,
+  "observations_corrected": 0,
+  "official_history_url": "https://www.bcc.cd/statistiques/secteur-exterieur/cours-de-change",
+  "note": "Ce fichier est renseigné automatiquement par scripts/collect_bcc.py lors de la prochaine synchronisation."
+}

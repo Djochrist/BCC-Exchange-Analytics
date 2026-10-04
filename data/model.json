@@ -1,0 +1,247 @@
+{
+  "model": "naive",
+  "method": "Dernière valeur",
+  "sample_observations": 1653,
+  "train_window": 730,
+  "last_date": "2026-10-02",
+  "last_value": 2265.0,
+  "generated_at": "2026-10-04T02:32:12+00:00",
+  "validation": {
+    "method": "rolling-origin",
+    "horizons": [
+      5,
+      10,
+      20
+    ],
+    "origins": 12,
+    "selection_rule": "meilleure moyenne du MAE relatif à la référence naïve",
+    "models": {
+      "naive": {
+        "relative_mae": {
+          "5": 1.0,
+          "10": 1.0,
+          "20": 1.0
+        },
+        "score": 1.0,
+        "failed_fits": 0
+      },
+      "drift": {
+        "relative_mae": {
+          "5": 1.4197,
+          "10": 1.6188,
+          "20": 1.7523
+        },
+        "score": 1.5969,
+        "failed_fits": 0
+      },
+      "holt_damped": {
+        "relative_mae": {
+          "5": 1.519,
+          "10": 1.495,
+          "20": 1.4173
+        },
+        "score": 1.4771,
+        "failed_fits": 0
+      },
+      "arima_011": {
+        "relative_mae": {
+          "5": 1.3551,
+          "10": 1.3622,
+          "20": 1.2537
+        },
+        "score": 1.3237,
+        "failed_fits": 0
+      },
+      "arima_110": {
+        "relative_mae": {
+          "5": 1.1867,
+          "10": 1.1867,
+          "20": 1.1684
+        },
+        "score": 1.1806,
+        "failed_fits": 0
+      },
+      "arima_111": {
+        "relative_mae": {
+          "5": 1.3056,
+          "10": 1.3162,
+          "20": 1.2381
+        },
+        "score": 1.2866,
+        "failed_fits": 0
+      },
+      "blend_naive_arima110": {
+        "relative_mae": {
+          "5": 1.0114,
+          "10": 1.0296,
+          "20": 1.0342
+        },
+        "score": 1.0251,
+        "failed_fits": 0
+      }
+    }
+  },
+  "forecast": [
+    {
+      "horizon": 1,
+      "value": 2265.0,
+      "lower80": 2222.51234,
+      "upper80": 2307.48766,
+      "lower95": 2200.020732,
+      "upper95": 2329.979268
+    },
+    {
+      "horizon": 2,
+      "value": 2265.0,
+      "lower80": 2204.913375,
+      "upper80": 2325.086625,
+      "lower95": 2173.105438,
+      "upper95": 2356.894562
+    },
+    {
+      "horizon": 3,
+      "value": 2265.0,
+      "lower80": 2191.409215,
+      "upper80": 2338.590785,
+      "lower95": 2152.452606,
+      "upper95": 2377.547394
+    },
+    {
+      "horizon": 4,
+      "value": 2265.0,
+      "lower80": 2180.024681,
+      "upper80": 2349.975319,
+      "lower95": 2135.041464,
+      "upper95": 2394.958536
+    },
+    {
+      "horizon": 5,
+      "value": 2265.0,
+      "lower80": 2169.994705,
+      "upper80": 2360.005295,
+      "lower95": 2119.701939,
+      "upper95": 2410.298061
+    },
+    {
+      "horizon": 6,
+      "value": 2265.0,
+      "lower80": 2160.926913,
+      "upper80": 2369.073087,
+      "lower95": 2105.833949,
+      "upper95": 2424.166051
+    },
+    {
+      "horizon": 7,
+      "value": 2265.0,
+      "lower80": 2152.588219,
+      "upper80": 2377.411781,
+      "lower95": 2093.081016,
+      "upper95": 2436.918984
+    },
+    {
+      "horizon": 8,
+      "value": 2265.0,
+      "lower80": 2144.826751,
+      "upper80": 2385.173249,
+      "lower95": 2081.210876,
+      "upper95": 2448.789124
+    },
+    {
+      "horizon": 9,
+      "value": 2265.0,
+      "lower80": 2137.537021,
+      "upper80": 2392.462979,
+      "lower95": 2070.062196,
+      "upper95": 2459.937804
+    },
+    {
+      "horizon": 10,
+      "value": 2265.0,
+      "lower80": 2130.642223,
+      "upper80": 2399.357777,
+      "lower95": 2059.517512,
+      "upper95": 2470.482488
+    },
+    {
+      "horizon": 11,
+      "value": 2265.0,
+      "lower80": 2124.084375,
+      "upper80": 2405.915625,
+      "lower95": 2049.488149,
+      "upper95": 2480.511851
+    },
+    {
+      "horizon": 12,
+      "value": 2265.0,
+      "lower80": 2117.818429,
+      "upper80": 2412.181571,
+      "lower95": 2039.905212,
+      "upper95": 2490.094788
+    },
+    {
+      "horizon": 13,
+      "value": 2265.0,
+      "lower80": 2111.808564,
+      "upper80": 2418.191436,
+      "lower95": 2030.713917,
+      "upper95": 2499.286083
+    },
+    {
+      "horizon": 14,
+      "value": 2265.0,
+      "lower80": 2106.025734,
+      "upper80": 2423.974266,
+      "lower95": 2021.869842,
+      "upper95": 2508.130158
+    },
+    {
+      "horizon": 15,
+      "value": 2265.0,
+      "lower80": 2100.446002,
+      "upper80": 2429.553998,
+      "lower95": 2013.336377,
+      "upper95": 2516.663623
+    },
+    {
+      "horizon": 16,
+      "value": 2265.0,
+      "lower80": 2095.049361,
+      "upper80": 2434.950639,
+      "lower95": 2005.082928,
+      "upper95": 2524.917072
+    },
+    {
+      "horizon": 17,
+      "value": 2265.0,
+      "lower80": 2089.818891,
+      "upper80": 2440.181109,
+      "lower95": 1997.083614,
+      "upper95": 2532.916386
+    },
+    {
+      "horizon": 18,
+      "value": 2265.0,
+      "lower80": 2084.740126,
+      "upper80": 2445.259874,
+      "lower95": 1989.316313,
+      "upper95": 2540.683687
+    },
+    {
+      "horizon": 19,
+      "value": 2265.0,
+      "lower80": 2079.800585,
+      "upper80": 2450.199415,
+      "lower95": 1981.761937,
+      "upper95": 2548.238063
+    },
+    {
+      "horizon": 20,
+      "value": 2265.0,
+      "lower80": 2074.989409,
+      "upper80": 2455.010591,
+      "lower95": 1974.403879,
+      "upper95": 2555.596121
+    }
+  ],
+  "note": "Prévision recalculée automatiquement à partir de la dernière série disponible. La performance reste évaluée hors échantillon par validation chronologique. Une prévision ne constitue pas une garantie sur le taux futur."
+}
