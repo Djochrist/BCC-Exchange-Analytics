@@ -5,7 +5,7 @@
   "train_window": 730,
   "last_date": "2026-10-05",
   "last_value": 2267.0,
-  "generated_at": "2026-10-05T10:48:02+00:00",
+  "generated_at": "2026-10-05T14:45:12+00:00",
   "validation": {
     "method": "rolling-origin",
     "horizons": [
