@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-04T03:58:14",
+  "generated_at": "2026-10-05T10:47:39",
   "model": "XGBoost",
   "target": "USD/CDF",
   "last_observation": {
-    "date": "2026-09-24",
-    "value": 2268.05
+    "date": "2026-10-05",
+    "value": 2267.0
   },
   "selected_model": {
     "h5": "naive",
@@ -15,120 +15,120 @@
     "h5": {
       "evaluation": "test final hors échantillon (dernière portion chronologique)",
       "test_period": [
-        "2025-04-15",
-        "2026-09-24"
+        "2025-08-28",
+        "2026-10-05"
       ],
-      "n_test": 358,
-      "mae_xgboost": 32.336100952929876,
-      "mae_naive": 31.5263431280927,
-      "rmse_xgboost": 58.3001374462413,
-      "rmse_naive": 53.70738535934462,
-      "smape_pct_xgboost": 1.370359803877947,
-      "smape_pct_naive": 1.3494737856338985,
-      "bias_xgboost": 18.217127155246853,
-      "bias_naive": 8.225877374301675,
-      "r2_oos_vs_naive": -0.13188963912073048,
-      "score_relatif": 1.0256851174126698,
-      "score_relatif_walk_forward_mean": 0.9386832515823984,
-      "diebold_mariano_p_one_sided": 0.7523430725337208,
+      "n_test": 239,
+      "mae_xgboost": 41.71829011839303,
+      "mae_naive": 40.661422594142266,
+      "rmse_xgboost": 70.58362717335841,
+      "rmse_naive": 66.27523572415936,
+      "smape_pct_xgboost": 1.786719265560754,
+      "smape_pct_naive": 1.7562927119055896,
+      "bias_xgboost": 23.250330542221224,
+      "bias_naive": 12.399916317991629,
+      "r2_oos_vs_naive": -0.1038236873621281,
+      "score_relatif": 1.0259918974011257,
+      "score_relatif_walk_forward_mean": 1.023066881097022,
+      "diebold_mariano_p_one_sided": 0.7957681567197389,
       "bootstrap_ratio_ci": [
-        0.9469286434237019,
-        1.0893290428160267
+        0.9623049749669355,
+        1.0760937866296858
       ],
-      "interval_empirical_coverage_holdout": 0.8379888268156425,
-      "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve."
+      "interval_empirical_coverage_holdout": 0.8410041841004184,
+      "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve."
     },
     "h10": {
       "evaluation": "test final hors échantillon (dernière portion chronologique)",
       "test_period": [
-        "2025-04-15",
-        "2026-09-24"
+        "2025-08-28",
+        "2026-10-05"
       ],
-      "n_test": 353,
-      "mae_xgboost": 45.67871358928703,
-      "mae_naive": 43.33126774327426,
-      "rmse_xgboost": 88.24218925263591,
-      "rmse_naive": 80.74051961355316,
-      "smape_pct_xgboost": 1.9079638395340353,
-      "smape_pct_naive": 1.8252908314010625,
-      "bias_xgboost": 30.92407670986116,
-      "bias_naive": 16.66916292353606,
-      "r2_oos_vs_naive": -0.16911487596206798,
-      "score_relatif": 1.0541744095723378,
-      "score_relatif_walk_forward_mean": 0.9367621033385859,
-      "diebold_mariano_p_one_sided": 0.8792700711712863,
+      "n_test": 234,
+      "mae_xgboost": 60.95028153712423,
+      "mae_naive": 57.67816239316239,
+      "rmse_xgboost": 112.24139335572103,
+      "rmse_naive": 105.52049347073627,
+      "smape_pct_xgboost": 2.5658695784924577,
+      "smape_pct_naive": 2.444889909620742,
+      "bias_xgboost": 41.458026872929345,
+      "bias_naive": 25.36713675213675,
+      "r2_oos_vs_naive": -0.11812187664591978,
+      "score_relatif": 1.056730641341475,
+      "score_relatif_walk_forward_mean": 1.073456259740365,
+      "diebold_mariano_p_one_sided": 0.9055043461923848,
       "bootstrap_ratio_ci": [
-        0.9787446265130976,
-        1.107141542761244
+        0.9830461489254912,
+        1.1164899568400983
       ],
-      "interval_empirical_coverage_holdout": 0.8526912181303116,
-      "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve."
+      "interval_empirical_coverage_holdout": 0.8376068376068376,
+      "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve."
     },
     "h20": {
       "evaluation": "test final hors échantillon (dernière portion chronologique)",
       "test_period": [
-        "2025-04-15",
-        "2026-09-24"
+        "2025-08-28",
+        "2026-10-05"
       ],
-      "n_test": 343,
-      "mae_xgboost": 70.72732976242868,
-      "mae_naive": 66.74339127630448,
-      "rmse_xgboost": 141.7985501691916,
-      "rmse_naive": 133.4489780656047,
-      "smape_pct_xgboost": 2.913838166919301,
-      "smape_pct_naive": 2.7682786405178827,
-      "bias_xgboost": 56.523899168754426,
-      "bias_naive": 34.33043480337711,
-      "r2_oos_vs_naive": -0.12777059467654794,
-      "score_relatif": 1.0596903814735976,
-      "score_relatif_walk_forward_mean": 1.086544229339011,
-      "diebold_mariano_p_one_sided": 0.8558466427448899,
+      "n_test": 224,
+      "mae_xgboost": 95.82366254859205,
+      "mae_naive": 89.31857142857143,
+      "rmse_xgboost": 178.47669785092756,
+      "rmse_naive": 170.99799259473363,
+      "smape_pct_xgboost": 3.9996155008575576,
+      "smape_pct_naive": 3.743440481597312,
+      "bias_xgboost": 74.12817196611316,
+      "bias_naive": 48.15758928571428,
+      "r2_oos_vs_naive": -0.09560475980606431,
+      "score_relatif": 1.0728302190236303,
+      "score_relatif_walk_forward_mean": 1.1731325622472273,
+      "diebold_mariano_p_one_sided": 0.901383212620384,
       "bootstrap_ratio_ci": [
-        0.968656887348638,
-        1.1450801509748725
+        0.990906348069956,
+        1.2620522292954297
       ],
-      "interval_empirical_coverage_holdout": 0.8367346938775511,
+      "interval_empirical_coverage_holdout": 0.84375,
       "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve."
     }
   },
   "forecast": {
     "h5": {
-      "value": 2268.05,
-      "lower": 2254.95,
-      "upper": 2281.15,
+      "value": 2267.0,
+      "lower": 2252.15,
+      "upper": 2281.85,
       "horizon_observations": 5,
       "expected_return_pct": 0.0,
       "model_used": "naive",
-      "approx_target_date": "2026-10-01",
+      "approx_target_date": "2026-10-12",
       "alternatives": {
-        "xgboost": 2269.75,
-        "naive": 2268.05
+        "xgboost": 2268.0,
+        "naive": 2267.0
       }
     },
     "h10": {
-      "value": 2268.05,
-      "lower": 2250.19,
-      "upper": 2285.91,
+      "value": 2267.0,
+      "lower": 2244.11,
+      "upper": 2289.89,
       "horizon_observations": 10,
       "expected_return_pct": 0.0,
       "model_used": "naive",
-      "approx_target_date": "2026-10-08",
+      "approx_target_date": "2026-10-19",
       "alternatives": {
-        "xgboost": 2269.16,
-        "naive": 2268.05
+        "xgboost": 2268.71,
+        "naive": 2267.0
       }
     },
     "h20": {
-      "value": 2268.05,
-      "lower": 2226.79,
-      "upper": 2309.31,
+      "value": 2267.0,
+      "lower": 2227.34,
+      "upper": 2306.66,
       "horizon_observations": 20,
       "expected_return_pct": 0.0,
       "model_used": "naive",
-      "approx_target_date": "2026-10-22",
+      "approx_target_date": "2026-11-02",
       "alternatives": {
-        "xgboost": 2268.23,
-        "naive": 2268.05
+        "xgboost": 2270.43,
+        "naive": 2267.0
       }
     }
   },
@@ -136,24 +136,24 @@
     "nominal_level": 0.9,
     "method": "conformal_normalized",
     "empirical_coverage_on_holdout": {
-      "h5": 0.8379888268156425,
-      "h10": 0.8526912181303116,
-      "h20": 0.8367346938775511
+      "h5": 0.8410041841004184,
+      "h10": 0.8376068376068376,
+      "h20": 0.84375
     },
     "note": "Intervalles prédictifs de type conformal split calibrés sur les erreurs hors échantillon. Couverture NOMINALE : ce ne sont pas des probabilités exactes."
   },
   "horizons_note": "h est un nombre d'observations (jours ouvrés BCC), pas de jours calendaires. approx_target_date ignore les jours fériés.",
   "data": {
-    "source_file": "/home/kalimement/Documents/MEMOIRE/usdcdf_ml/data/raw/cours-de-change-quotidien.csv",
-    "n_observations_used": 2453,
-    "n_observations_excluded": 9,
+    "source_file": "/home/runner/work/BCC-Exchange-Analytics/BCC-Exchange-Analytics/analysis/xgboost/data/raw/cours-de-change-quotidien.csv",
+    "n_observations_used": 1657,
+    "n_observations_excluded": 0,
     "period": [
       "2017-01-02",
-      "2026-09-24"
+      "2026-10-05"
     ]
   },
   "model_staleness": {
-    "trained_through": "2026-09-24",
+    "trained_through": "2026-10-05",
     "new_observations_since_training": 0
   },
   "disclaimer": "Prévision statistique indicative ; ne constitue pas un conseil financier."

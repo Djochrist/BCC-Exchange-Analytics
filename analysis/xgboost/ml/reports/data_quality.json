@@ -1,5 +1,5 @@
 {
-  "n_rows_input": 2462,
+  "n_rows_input": 1657,
   "invalid_dates": 0,
   "missing_values": 0,
   "non_numeric_values": 0,
@@ -10,103 +10,250 @@
   "was_chronological_in_file": true,
   "spacing": {
     "gap_days_distribution": {
-      "1": 1919,
-      "2": 32,
-      "3": 477,
-      "4": 27,
-      "5": 6
+      "1": 985,
+      "2": 142,
+      "3": 298,
+      "4": 95,
+      "5": 49,
+      "6": 32,
+      "7": 21,
+      "8": 7,
+      "9": 2,
+      "10": 7,
+      "11": 6,
+      "12": 2,
+      "13": 2,
+      "14": 2,
+      "15": 1,
+      "19": 2,
+      "31": 1,
+      "32": 2
     },
     "median_gap_days": 1.0,
-    "max_gap_days": 5,
+    "max_gap_days": 32,
     "weekday_distribution": {
-      "0": 489,
-      "1": 495,
-      "2": 492,
-      "3": 495,
-      "4": 491
+      "0": 303,
+      "1": 313,
+      "2": 319,
+      "3": 333,
+      "4": 389
     },
     "has_weekend_observations": false,
-    "gaps_over_threshold": [],
+    "gaps_over_threshold": [
+      {
+        "from": "2017-10-04",
+        "to": "2017-10-13",
+        "days": 9
+      },
+      {
+        "from": "2017-12-29",
+        "to": "2018-01-08",
+        "days": 10
+      },
+      {
+        "from": "2018-04-03",
+        "to": "2018-04-13",
+        "days": 10
+      },
+      {
+        "from": "2018-06-14",
+        "to": "2018-06-22",
+        "days": 8
+      },
+      {
+        "from": "2018-07-11",
+        "to": "2018-07-19",
+        "days": 8
+      },
+      {
+        "from": "2018-10-19",
+        "to": "2018-10-30",
+        "days": 11
+      },
+      {
+        "from": "2019-03-08",
+        "to": "2019-03-19",
+        "days": 11
+      },
+      {
+        "from": "2019-07-25",
+        "to": "2019-08-07",
+        "days": 13
+      },
+      {
+        "from": "2019-08-22",
+        "to": "2019-09-23",
+        "days": 32
+      },
+      {
+        "from": "2019-10-14",
+        "to": "2019-10-28",
+        "days": 14
+      },
+      {
+        "from": "2019-11-01",
+        "to": "2019-11-15",
+        "days": 14
+      },
+      {
+        "from": "2019-12-27",
+        "to": "2020-01-07",
+        "days": 11
+      },
+      {
+        "from": "2020-01-15",
+        "to": "2020-01-30",
+        "days": 15
+      },
+      {
+        "from": "2020-03-11",
+        "to": "2020-03-19",
+        "days": 8
+      },
+      {
+        "from": "2020-09-10",
+        "to": "2020-09-18",
+        "days": 8
+      },
+      {
+        "from": "2020-11-20",
+        "to": "2020-12-03",
+        "days": 13
+      },
+      {
+        "from": "2021-02-11",
+        "to": "2021-02-22",
+        "days": 11
+      },
+      {
+        "from": "2021-03-12",
+        "to": "2021-03-24",
+        "days": 12
+      },
+      {
+        "from": "2021-05-14",
+        "to": "2021-05-24",
+        "days": 10
+      },
+      {
+        "from": "2021-05-26",
+        "to": "2021-06-03",
+        "days": 8
+      },
+      {
+        "from": "2021-10-15",
+        "to": "2021-10-26",
+        "days": 11
+      },
+      {
+        "from": "2021-10-29",
+        "to": "2021-11-29",
+        "days": 31
+      },
+      {
+        "from": "2021-12-15",
+        "to": "2022-01-03",
+        "days": 19
+      },
+      {
+        "from": "2022-04-15",
+        "to": "2022-04-25",
+        "days": 10
+      },
+      {
+        "from": "2022-05-12",
+        "to": "2022-05-20",
+        "days": 8
+      },
+      {
+        "from": "2022-07-29",
+        "to": "2022-08-08",
+        "days": 10
+      },
+      {
+        "from": "2022-08-09",
+        "to": "2022-08-19",
+        "days": 10
+      },
+      {
+        "from": "2022-08-19",
+        "to": "2022-08-29",
+        "days": 10
+      },
+      {
+        "from": "2022-09-30",
+        "to": "2022-11-01",
+        "days": 32
+      },
+      {
+        "from": "2022-11-08",
+        "to": "2022-11-16",
+        "days": 8
+      },
+      {
+        "from": "2022-11-23",
+        "to": "2022-12-12",
+        "days": 19
+      },
+      {
+        "from": "2023-01-31",
+        "to": "2023-02-09",
+        "days": 9
+      },
+      {
+        "from": "2023-02-17",
+        "to": "2023-02-28",
+        "days": 11
+      },
+      {
+        "from": "2023-03-31",
+        "to": "2023-04-12",
+        "days": 12
+      }
+    ],
     "note": "Les horizons h sont comptés en OBSERVATIONS, pas en jours calendaires."
   },
   "anomaly_detection": {
     "rule": "bloc de 1 à 5 obs. écartées de ≥10% de la valeur avant le bloc, avec retour à ±2% de cette valeur juste après",
     "policy": "exclude",
-    "n_flagged": 9,
-    "flagged": [
-      {
-        "date": "2017-07-03",
-        "value": 921.2912
-      },
-      {
-        "date": "2017-07-04",
-        "value": 921.6634
-      },
-      {
-        "date": "2017-07-05",
-        "value": 919.769
-      },
-      {
-        "date": "2018-07-02",
-        "value": 916.7248
-      },
-      {
-        "date": "2018-07-03",
-        "value": 921.2912
-      },
-      {
-        "date": "2018-07-04",
-        "value": 921.6634
-      },
-      {
-        "date": "2018-07-05",
-        "value": 919.769
-      },
-      {
-        "date": "2019-07-11",
-        "value": 1446.2553
-      },
-      {
-        "date": "2020-03-16",
-        "value": 1898.5537
-      }
-    ],
+    "n_flagged": 0,
+    "flagged": [],
     "limits": "Les 1res/dernières observations ne peuvent pas être validées par ce test (pas de valeur avant/après)."
   },
   "extreme_returns_kept": {
     "threshold_robust_z": 8.0,
-    "n": 259,
+    "n": 145,
     "by_year": {
-      "2017": 19,
-      "2020": 3,
-      "2023": 95,
-      "2024": 33,
-      "2025": 53,
-      "2026": 56
+      "2017": 9,
+      "2020": 2,
+      "2023": 62,
+      "2024": 11,
+      "2025": 32,
+      "2026": 29
     },
     "note": "CONSERVÉS : correspondent à de vraies phases de volatilité (ex. 2023). Aucune suppression arbitraire."
   },
-  "repeated_consecutive_values": 56,
+  "repeated_consecutive_values": 25,
   "last_observation": {
-    "date": "2026-09-24",
-    "value": 2268.05,
-    "change_vs_previous": 0.00024255788313132243,
+    "date": "2026-10-05",
+    "value": 2267.0,
+    "change_vs_previous": 0.0008830022075054789,
     "alert": false
   },
-  "n_rows_clean": 2453,
-  "n_rows_excluded": 9,
+  "n_rows_clean": 1657,
+  "n_rows_excluded": 0,
   "date_min": "2017-01-02",
-  "date_max": "2026-09-24",
-  "value_min": 1215.5887,
-  "value_max": 2887.1813,
+  "date_max": "2026-10-05",
+  "value_min": 1215.59,
+  "value_max": 2887.18,
   "modified_values": 0,
   "interpolated_values": 0,
   "source": {
-    "path": "/home/kalimement/Documents/MEMOIRE/usdcdf_ml/data/raw/cours-de-change-quotidien.csv",
+    "path": "/home/runner/work/BCC-Exchange-Analytics/BCC-Exchange-Analytics/analysis/xgboost/data/raw/cours-de-change-quotidien.csv",
     "format": "csv",
     "date_column": "Date",
     "value_column": "USD/CDF",
-    "n_columns_in_file": 22,
-    "n_rows_in_file": 2462
+    "n_columns_in_file": 2,
+    "n_rows_in_file": 1657
   }
 }

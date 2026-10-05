@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-04T02:19:00",
+  "generated_at": "2026-10-05T10:47:58",
   "model": "strategy_search_walk_forward",
   "target": "USD/CDF",
   "last_observation": {
-    "date": "2026-09-24",
-    "value": 2268.05
+    "date": "2026-10-05",
+    "value": 2267.0
   },
-  "test_start": "2024-10-09",
+  "test_start": "2025-04-15",
   "selected_model": {
     "h5": "naive",
-    "h10": "ma",
+    "h10": "naive",
     "h20": "naive"
   },
   "strategies": {
@@ -17,24 +17,24 @@
       "strategy": "ma",
       "params": {
         "fast": 20,
-        "slow": 50,
-        "neutral_band": 0.003
+        "slow": 30,
+        "neutral_band": 0.001
       },
       "expected_returns": {
-        "-1": 0.0,
-        "0": 0.0002408135982038262,
-        "1": 0.002425127737138766
+        "-1": 0.015834498011088716,
+        "0": 0.0005484494116356764,
+        "1": 0.0028318884202049865
       },
       "holdout": {
-        "mae": 25.43438294435507,
-        "mae_naive": 25.480049675310763,
-        "mae_ratio": 0.9982077456073432,
-        "rmse": 46.68053333079459,
-        "rmse_naive": 46.56733312623405,
-        "rmse_ratio": 1.002430893009348,
-        "directional_accuracy": 0.546448087431694,
-        "signal_coverage": 0.32098765432098764,
-        "n": 486
+        "mae": 35.95546516754739,
+        "mae_naive": 31.946687116564426,
+        "mae_ratio": 1.1254833728566616,
+        "rmse": 66.0077333424863,
+        "rmse_naive": 57.05477339789076,
+        "rmse_ratio": 1.1569186837735566,
+        "directional_accuracy": 0.5214723926380368,
+        "signal_coverage": 0.46319018404907975,
+        "n": 326
       },
       "selected_model": "naive"
     },
@@ -42,26 +42,26 @@
       "strategy": "ma",
       "params": {
         "fast": 20,
-        "slow": 50,
-        "neutral_band": 0.003
+        "slow": 30,
+        "neutral_band": 0.001
       },
       "expected_returns": {
-        "-1": 0.0,
-        "0": 0.0005185633476985085,
-        "1": 0.004692968316333035
+        "-1": 0.02564405514023116,
+        "0": 0.0011151356445577854,
+        "1": 0.005608858750540957
       },
       "holdout": {
-        "mae": 34.42121454470227,
-        "mae_naive": 34.463176516662045,
-        "mae_ratio": 0.9987824113676961,
-        "rmse": 69.84652525076307,
-        "rmse_naive": 69.55979322984618,
-        "rmse_ratio": 1.004122094209933,
-        "directional_accuracy": 0.5623268698060941,
-        "signal_coverage": 0.32432432432432434,
-        "n": 481
+        "mae": 55.27287837922527,
+        "mae_naive": 44.82255451713395,
+        "mae_ratio": 1.23314877910621,
+        "rmse": 107.28881362126288,
+        "rmse_naive": 90.386745509853,
+        "rmse_ratio": 1.1869971976097689,
+        "directional_accuracy": 0.5327102803738317,
+        "signal_coverage": 0.470404984423676,
+        "n": 321
       },
-      "selected_model": "ma"
+      "selected_model": "naive"
     },
     "h20": {
       "strategy": "ma",
@@ -72,46 +72,46 @@
       },
       "expected_returns": {
         "-1": 0.0,
-        "0": 0.001084163166864327,
-        "1": 0.00781111803960477
+        "0": 0.00220799404495442,
+        "1": 0.00909605173499961
       },
       "holdout": {
-        "mae": 51.5854196410682,
-        "mae_naive": 51.27861075988738,
-        "mae_ratio": 1.0059831745952996,
-        "rmse": 114.78379103214417,
-        "rmse_naive": 114.10920558840193,
-        "rmse_ratio": 1.0059117530462485,
-        "directional_accuracy": 0.5698005698005698,
-        "signal_coverage": 0.33121019108280253,
-        "n": 471
+        "mae": 71.68257021496238,
+        "mae_naive": 70.83755627009647,
+        "mae_ratio": 1.0119288974572183,
+        "rmse": 148.37420672777134,
+        "rmse_naive": 146.8558796653473,
+        "rmse_ratio": 1.0103388918842335,
+        "directional_accuracy": 0.5544554455445545,
+        "signal_coverage": 0.4437299035369775,
+        "n": 311
       },
       "selected_model": "naive"
     }
   },
   "forecast": {
     "h5": {
-      "value": 2268.05,
-      "lower": 2266.225041345953,
-      "upper": 2274.1206389938275,
+      "value": 2267.0,
+      "lower": 2262.2199788441494,
+      "upper": 2276.539430033723,
       "signal": 0,
       "strategy": "ma",
       "model_used": "naive",
       "expected_return": 0.0
     },
     "h10": {
-      "value": 2269.2193071492575,
-      "lower": 2266.177701213158,
-      "upper": 2277.2472354286183,
+      "value": 2267.0,
+      "lower": 2261.2996253264723,
+      "upper": 2281.783857353229,
       "signal": 0,
       "strategy": "ma",
-      "model_used": "ma",
-      "expected_return": 0.0005155561602510073
+      "model_used": "naive",
+      "expected_return": 0.0
     },
     "h20": {
-      "value": 2268.05,
-      "lower": 2266.286043704903,
-      "upper": 2282.4706508306717,
+      "value": 2267.0,
+      "lower": 2260.690704410216,
+      "upper": 2292.8052904872516,
       "signal": 0,
       "strategy": "ma",
       "model_used": "naive",
