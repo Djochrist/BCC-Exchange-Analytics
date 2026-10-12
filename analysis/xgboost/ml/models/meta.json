@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T10:47:38",
+  "generated_at": "2026-10-12T11:15:24",
   "feature_set": "scale_free",
   "feature_names": [
     "lag_1_rel",
@@ -34,7 +34,7 @@
     "quarter",
     "days_since_previous_observation"
   ],
-  "trained_through": "2026-10-05",
+  "trained_through": "2026-10-12",
   "horizons": {
     "h5": {
       "selected_model": "naive",
@@ -52,17 +52,17 @@
       "interval_method": "conformal_normalized",
       "calibration": {
         "xgboost": {
-          "n_calibration": 989,
+          "n_calibration": 990,
           "level_nominal": 0.9,
-          "q_abs": 0.026020038654340105,
-          "sigma_floor": 0.0009192004320370369,
-          "q_norm": 1.442204812423648
+          "q_abs": 0.02597489791480978,
+          "sigma_floor": 0.0009194218945410882,
+          "q_norm": 1.3926276125549522
         },
         "naive": {
-          "n_calibration": 989,
+          "n_calibration": 990,
           "level_nominal": 0.9,
           "q_abs": 0.02559305545162016,
-          "sigma_floor": 0.0009192004320370369,
+          "sigma_floor": 0.0009194218945410882,
           "q_norm": 1.3620632446088092
         }
       }
@@ -83,49 +83,49 @@
       "interval_method": "conformal_normalized",
       "calibration": {
         "xgboost": {
-          "n_calibration": 984,
+          "n_calibration": 985,
           "level_nominal": 0.9,
-          "q_abs": 0.03126470317481045,
-          "sigma_floor": 0.0012983797411420532,
-          "q_norm": 1.5591032760178218
+          "q_abs": 0.030705583451772323,
+          "sigma_floor": 0.0012986929364188398,
+          "q_norm": 1.5705005106231926
         },
         "naive": {
-          "n_calibration": 984,
+          "n_calibration": 985,
           "level_nominal": 0.9,
           "q_abs": 0.033020487326392844,
-          "sigma_floor": 0.0012983797411420532,
-          "q_norm": 1.484466192190663
+          "sigma_floor": 0.0012986929364188398,
+          "q_norm": 1.4674537638198701
         }
       }
     },
     "h20": {
       "selected_model": "naive",
       "best_params": {
-        "n_estimators": 100,
+        "n_estimators": 200,
         "max_depth": 2,
         "learning_rate": 0.05,
         "subsample": 0.8,
-        "colsample_bytree": 1.0,
+        "colsample_bytree": 0.9,
         "min_child_weight": 1,
-        "reg_alpha": 0.0,
-        "reg_lambda": 50.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
         "objective": "reg:absoluteerror"
       },
       "interval_method": "conformal_normalized",
       "calibration": {
         "xgboost": {
-          "n_calibration": 974,
+          "n_calibration": 975,
           "level_nominal": 0.9,
-          "q_abs": 0.04359930743506102,
-          "sigma_floor": 0.0018184341116118192,
-          "q_norm": 1.741975803531348
+          "q_abs": 0.04021075954161346,
+          "sigma_floor": 0.0018250352003193638,
+          "q_norm": 1.8650583139851105
         },
         "naive": {
-          "n_calibration": 974,
+          "n_calibration": 975,
           "level_nominal": 0.9,
-          "q_abs": 0.043236520594044814,
-          "sigma_floor": 0.0018184341116118192,
-          "q_norm": 1.8186284871583969
+          "q_abs": 0.0424326016820844,
+          "sigma_floor": 0.0018250352003193638,
+          "q_norm": 1.6175984520616913
         }
       }
     }
