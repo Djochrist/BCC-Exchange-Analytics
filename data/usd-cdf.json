@@ -6702,11 +6702,11 @@
   "collection": {
     "method": "pages quotidiennes officielles BCC",
     "endpoint_pattern": "https://www.bcc.cd/marche-des-changes/cours-de-change/{YYYY-MM-DD}",
-    "checked_at": "2026-10-26T09:15:53+00:00",
+    "checked_at": "2026-10-26T13:08:29+00:00",
     "window_start": "2026-10-12",
     "window_end": "2026-10-26",
     "calendar_days_attempted": 15,
-    "observations_added": 1,
+    "observations_added": 0,
     "observations_corrected": 0
   }
 }
