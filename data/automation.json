@@ -1,9 +1,9 @@
 {
   "method": "pages quotidiennes officielles BCC",
   "endpoint_pattern": "https://www.bcc.cd/marche-des-changes/cours-de-change/{YYYY-MM-DD}",
-  "checked_at": "2026-10-23T11:43:26+00:00",
-  "window_start": "2026-10-09",
-  "window_end": "2026-10-23",
+  "checked_at": "2026-10-26T09:15:53+00:00",
+  "window_start": "2026-10-12",
+  "window_end": "2026-10-26",
   "calendar_days_attempted": 15,
   "observations_added": 1,
   "observations_corrected": 0

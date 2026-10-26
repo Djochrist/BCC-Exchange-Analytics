@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T09:13:55",
+  "generated_at": "2026-10-26T09:16:51",
   "feature_set": "scale_free",
   "feature_names": [
     "lag_1_rel",
@@ -34,7 +34,7 @@
     "quarter",
     "days_since_previous_observation"
   ],
-  "trained_through": "2026-10-19",
+  "trained_through": "2026-10-26",
   "horizons": {
     "h5": {
       "selected_model": "naive",
@@ -54,16 +54,16 @@
         "xgboost": {
           "n_calibration": 991,
           "level_nominal": 0.9,
-          "q_abs": 0.025883862064463692,
+          "q_abs": 0.024859438068762563,
           "sigma_floor": 0.0009196433570451396,
-          "q_norm": 1.361438263090015
+          "q_norm": 1.342127939447433
         },
         "naive": {
           "n_calibration": 991,
           "level_nominal": 0.9,
-          "q_abs": 0.02528389868505798,
+          "q_abs": 0.024863909221700564,
           "sigma_floor": 0.0009196433570451396,
-          "q_norm": 1.3441359134506299
+          "q_norm": 1.319665369979438
         }
       }
     },
@@ -85,16 +85,16 @@
         "xgboost": {
           "n_calibration": 986,
           "level_nominal": 0.9,
-          "q_abs": 0.029561787370127268,
+          "q_abs": 0.029184470704558985,
           "sigma_floor": 0.0012990061316956263,
-          "q_norm": 1.5250220580206817
+          "q_norm": 1.441563361862231
         },
         "naive": {
           "n_calibration": 986,
           "level_nominal": 0.9,
-          "q_abs": 0.03173537442370533,
+          "q_abs": 0.02944976802670951,
           "sigma_floor": 0.0012990061316956263,
-          "q_norm": 1.4151631727005978
+          "q_norm": 1.4011243708321766
         }
       }
     },
@@ -116,16 +116,16 @@
         "xgboost": {
           "n_calibration": 976,
           "level_nominal": 0.9,
-          "q_abs": 0.041158578414402625,
+          "q_abs": 0.03859175587555708,
           "sigma_floor": 0.0018266722442676785,
-          "q_norm": 1.6400872935057582
+          "q_norm": 1.6684541991306192
         },
         "naive": {
           "n_calibration": 976,
           "level_nominal": 0.9,
-          "q_abs": 0.0417894612754921,
+          "q_abs": 0.039820401171886566,
           "sigma_floor": 0.0018266722442676785,
-          "q_norm": 1.5878066939521396
+          "q_norm": 1.569359090622368
         }
       }
     }
