@@ -4,9 +4,9 @@
   "sourceUrl": "https://www.bcc.cd/statistiques/secteur-exterieur/cours-de-change",
   "period": {
     "start": "2017-01-02",
-    "end": "2026-10-29"
+    "end": "2026-10-30"
   },
-  "observations": 1675,
+  "observations": 1676,
   "unit": "CDF pour 1 USD",
   "snapshotNote": "Les observations sont collectées automatiquement depuis les pages quotidiennes officielles de la Banque Centrale du Congo. Les jours sans cotation sont ignorés et aucune valeur n'est interpolée.",
   "series": [
@@ -6709,14 +6709,18 @@
     {
       "date": "2026-10-29",
       "value": 2261.46
+    },
+    {
+      "date": "2026-10-30",
+      "value": 2261.56
     }
   ],
   "collection": {
     "method": "pages quotidiennes officielles BCC",
     "endpoint_pattern": "https://www.bcc.cd/marche-des-changes/cours-de-change/{YYYY-MM-DD}",
-    "checked_at": "2026-10-29T13:06:21+00:00",
-    "window_start": "2026-10-15",
-    "window_end": "2026-10-29",
+    "checked_at": "2026-10-30T12:59:38+00:00",
+    "window_start": "2026-10-16",
+    "window_end": "2026-10-30",
     "calendar_days_attempted": 15,
     "observations_added": 1,
     "observations_corrected": 0
