@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-26T09:17:08",
+  "generated_at": "2026-11-02T11:35:55",
   "model": "strategy_search_walk_forward",
   "target": "USD/CDF",
   "last_observation": {
-    "date": "2026-10-26",
-    "value": 2264.0
+    "date": "2026-11-02",
+    "value": 2265.16
   },
-  "test_start": "2025-05-02",
+  "test_start": "2025-05-08",
   "selected_model": {
-    "h5": "ma",
+    "h5": "naive",
     "h10": "naive",
     "h20": "naive"
   },
@@ -26,17 +26,17 @@
         "1": 0.002466863685430809
       },
       "holdout": {
-        "mae": 31.564687512255198,
-        "mae_naive": 31.567446808510645,
-        "mae_ratio": 0.9999125904520506,
-        "rmse": 56.92313653302965,
-        "rmse_naive": 56.783984307726975,
-        "rmse_ratio": 1.0024505540954747,
-        "directional_accuracy": 0.5136363636363637,
-        "signal_coverage": 0.4194528875379939,
-        "n": 329
+        "mae": 31.441697134737396,
+        "mae_naive": 31.43430303030304,
+        "mae_ratio": 1.0002352240616637,
+        "rmse": 56.82399290877401,
+        "rmse_naive": 56.68478195114175,
+        "rmse_ratio": 1.0024558788592015,
+        "directional_accuracy": 0.5067873303167421,
+        "signal_coverage": 0.41818181818181815,
+        "n": 330
       },
-      "selected_model": "ma"
+      "selected_model": "naive"
     },
     "h10": {
       "strategy": "ma",
@@ -47,19 +47,19 @@
       },
       "expected_returns": {
         "-1": 0.0,
-        "0": 0.0011032176008882733,
+        "0": 0.0010908448258000192,
         "1": 0.005246925479008402
       },
       "holdout": {
-        "mae": 44.497601097982,
-        "mae_naive": 44.24703703703703,
-        "mae_ratio": 1.0056628438359665,
-        "rmse": 90.40504544932372,
-        "rmse_naive": 89.95603205846568,
-        "rmse_ratio": 1.0049914761754521,
-        "directional_accuracy": 0.5488372093023256,
-        "signal_coverage": 0.42592592592592593,
-        "n": 324
+        "mae": 44.31068028705594,
+        "mae_naive": 44.05784615384614,
+        "mae_ratio": 1.005738685734362,
+        "rmse": 90.25463760977478,
+        "rmse_naive": 89.80960382772162,
+        "rmse_ratio": 1.0049553028082259,
+        "directional_accuracy": 0.5416666666666666,
+        "signal_coverage": 0.4246153846153846,
+        "n": 325
       },
       "selected_model": "naive"
     },
@@ -72,46 +72,46 @@
       },
       "expected_returns": {
         "-1": 0.0,
-        "0": 0.002101408312237263,
+        "0": 0.0020995276062885093,
         "1": 0.00909605173499961
       },
       "holdout": {
-        "mae": 70.89524558459598,
-        "mae_naive": 69.99789808917198,
-        "mae_ratio": 1.0128196348736194,
-        "rmse": 147.59255290678541,
-        "rmse_naive": 146.13391109082326,
-        "rmse_ratio": 1.0099815423064644,
-        "directional_accuracy": 0.551219512195122,
-        "signal_coverage": 0.4394904458598726,
-        "n": 314
+        "mae": 70.74808638720782,
+        "mae_naive": 69.7180634920635,
+        "mae_ratio": 1.014774117976779,
+        "rmse": 147.3602996517258,
+        "rmse_naive": 145.89649233138945,
+        "rmse_ratio": 1.0100331906336133,
+        "directional_accuracy": 0.529126213592233,
+        "signal_coverage": 0.4380952380952381,
+        "n": 315
       },
       "selected_model": "naive"
     }
   },
   "forecast": {
     "h5": {
-      "value": 2265.24749778666,
-      "lower": 2259.4879025298433,
-      "upper": 2276.1645951685164,
+      "value": 2265.16,
+      "lower": 2260.365640883952,
+      "upper": 2277.3138886195097,
       "signal": 0,
       "strategy": "ma",
-      "model_used": "ma",
-      "expected_return": 0.0005510149234364548
+      "model_used": "naive",
+      "expected_return": 0.0
     },
     "h10": {
-      "value": 2264.0,
-      "lower": 2258.0434875176948,
-      "upper": 2282.5956908581425,
+      "value": 2265.16,
+      "lower": 2259.1882759297328,
+      "upper": 2283.4987422542936,
       "signal": 0,
       "strategy": "ma",
       "model_used": "naive",
       "expected_return": 0.0
     },
     "h20": {
-      "value": 2264.0,
-      "lower": 2257.661383718763,
-      "upper": 2288.931056986517,
+      "value": 2265.16,
+      "lower": 2258.694530308964,
+      "upper": 2289.827247390069,
       "signal": 0,
       "strategy": "ma",
       "model_used": "naive",

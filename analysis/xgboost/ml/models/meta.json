@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T09:16:51",
+  "generated_at": "2026-11-02T11:35:39",
   "feature_set": "scale_free",
   "feature_names": [
     "lag_1_rel",
@@ -34,7 +34,7 @@
     "quarter",
     "days_since_previous_observation"
   ],
-  "trained_through": "2026-10-26",
+  "trained_through": "2026-11-02",
   "horizons": {
     "h5": {
       "selected_model": "naive",
@@ -52,17 +52,17 @@
       "interval_method": "conformal_normalized",
       "calibration": {
         "xgboost": {
-          "n_calibration": 991,
+          "n_calibration": 992,
           "level_nominal": 0.9,
-          "q_abs": 0.024859438068762563,
-          "sigma_floor": 0.0009196433570451396,
-          "q_norm": 1.342127939447433
+          "q_abs": 0.02498094353412106,
+          "sigma_floor": 0.0009198485383303419,
+          "q_norm": 1.3445009188551287
         },
         "naive": {
-          "n_calibration": 991,
+          "n_calibration": 992,
           "level_nominal": 0.9,
-          "q_abs": 0.024863909221700564,
-          "sigma_floor": 0.0009196433570451396,
+          "q_abs": 0.024629950715270077,
+          "sigma_floor": 0.0009198485383303419,
           "q_norm": 1.319665369979438
         }
       }
@@ -83,17 +83,17 @@
       "interval_method": "conformal_normalized",
       "calibration": {
         "xgboost": {
-          "n_calibration": 986,
+          "n_calibration": 987,
           "level_nominal": 0.9,
-          "q_abs": 0.029184470704558985,
-          "sigma_floor": 0.0012990061316956263,
-          "q_norm": 1.441563361862231
+          "q_abs": 0.029001561558913647,
+          "sigma_floor": 0.0012993193269724129,
+          "q_norm": 1.453216572329237
         },
         "naive": {
-          "n_calibration": 986,
+          "n_calibration": 987,
           "level_nominal": 0.9,
           "q_abs": 0.02944976802670951,
-          "sigma_floor": 0.0012990061316956263,
+          "sigma_floor": 0.0012993193269724129,
           "q_norm": 1.4011243708321766
         }
       }
@@ -101,30 +101,30 @@
     "h20": {
       "selected_model": "naive",
       "best_params": {
-        "n_estimators": 100,
+        "n_estimators": 200,
         "max_depth": 2,
         "learning_rate": 0.05,
         "subsample": 0.8,
-        "colsample_bytree": 1.0,
+        "colsample_bytree": 0.9,
         "min_child_weight": 1,
-        "reg_alpha": 0.0,
-        "reg_lambda": 50.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
         "objective": "reg:absoluteerror"
       },
       "interval_method": "conformal_normalized",
       "calibration": {
         "xgboost": {
-          "n_calibration": 976,
+          "n_calibration": 977,
           "level_nominal": 0.9,
-          "q_abs": 0.03859175587555708,
-          "sigma_floor": 0.0018266722442676785,
-          "q_norm": 1.6684541991306192
+          "q_abs": 0.0383055230192324,
+          "sigma_floor": 0.0018283092882159934,
+          "q_norm": 1.7074099629785544
         },
         "naive": {
-          "n_calibration": 976,
+          "n_calibration": 977,
           "level_nominal": 0.9,
-          "q_abs": 0.039820401171886566,
-          "sigma_floor": 0.0018266722442676785,
+          "q_abs": 0.038665739728029225,
+          "sigma_floor": 0.0018283092882159934,
           "q_norm": 1.569359090622368
         }
       }
