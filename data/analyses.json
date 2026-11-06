@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-11-05T14:42:36+00:00",
+  "generated_at": "2026-11-06T14:20:31+00:00",
   "current_series": {
     "source": "Banque Centrale du Congo",
-    "observations": 1680,
+    "observations": 1681,
     "start": "2017-01-02",
     "last_observation": {
-      "date": "2026-11-05",
-      "value": 2263.33
+      "date": "2026-11-06",
+      "value": 2261.0
     }
   },
   "technical_snapshot": {
-    "ema_20": 2264.1104867989957,
-    "ema_50": 2264.295377714605,
-    "ema_gap_20_50": -8.16549454761839e-05,
-    "rsi_14": 48.64353580226777,
-    "momentum_10_pct": -0.05916976866386925,
-    "momentum_20_pct": -0.07373068432671159,
-    "macd": -0.5930904053557242,
-    "macd_hist": 0.09732697654939404,
-    "volatility_20_pct": 0.1409596103922235,
-    "range_position_20": 0.4965243296921468,
+    "ema_20": 2263.814249960996,
+    "ema_50": 2264.166147215993,
+    "ema_gap_20_50": -0.00015542024397352527,
+    "rsi_14": 45.77620888251118,
+    "momentum_10_pct": -0.17660044150110688,
+    "momentum_20_pct": -0.20612004396051153,
+    "macd": -0.7663775456558142,
+    "macd_hist": -0.06076813100055667,
+    "volatility_20_pct": 0.14242538426689713,
+    "range_position_20": 0.2651439920556136,
     "ema_signal": 0
   },
   "xgboost": {
     "generated_at": "2026-11-02T11:35:39",
     "trained_through": "2026-11-02",
-    "new_observations_since_training": 3,
+    "new_observations_since_training": 4,
     "last_observation": {
       "date": "2026-11-02",
       "value": 2265.16
@@ -175,7 +175,7 @@
   "strategy": {
     "generated_at": "2026-11-02T11:35:55",
     "trained_through": "2026-11-02",
-    "new_observations_since_training": 3,
+    "new_observations_since_training": 4,
     "summary": {
       "h5": {
         "strategy": "ma",
