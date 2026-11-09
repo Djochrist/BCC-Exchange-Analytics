@@ -1,5 +1,5 @@
 {
-  "n_rows_input": 1677,
+  "n_rows_input": 1682,
   "invalid_dates": 0,
   "missing_values": 0,
   "non_numeric_values": 0,
@@ -10,9 +10,9 @@
   "was_chronological_in_file": true,
   "spacing": {
     "gap_days_distribution": {
-      "1": 1001,
+      "1": 1005,
       "2": 142,
-      "3": 302,
+      "3": 303,
       "4": 95,
       "5": 49,
       "6": 32,
@@ -32,11 +32,11 @@
     "median_gap_days": 1.0,
     "max_gap_days": 32,
     "weekday_distribution": {
-      "0": 307,
-      "1": 317,
-      "2": 323,
-      "3": 337,
-      "4": 393
+      "0": 308,
+      "1": 318,
+      "2": 324,
+      "3": 338,
+      "4": 394
     },
     "has_weekend_observations": false,
     "gaps_over_threshold": [
@@ -235,15 +235,15 @@
   },
   "repeated_consecutive_values": 25,
   "last_observation": {
-    "date": "2026-11-02",
-    "value": 2265.16,
-    "change_vs_previous": 0.001591821574488339,
+    "date": "2026-11-09",
+    "value": 2256.67,
+    "change_vs_previous": -0.001915081822202569,
     "alert": false
   },
-  "n_rows_clean": 1677,
+  "n_rows_clean": 1682,
   "n_rows_excluded": 0,
   "date_min": "2017-01-02",
-  "date_max": "2026-11-02",
+  "date_max": "2026-11-09",
   "value_min": 1215.59,
   "value_max": 2887.18,
   "modified_values": 0,
@@ -254,6 +254,6 @@
     "date_column": "Date",
     "value_column": "USD/CDF",
     "n_columns_in_file": 2,
-    "n_rows_in_file": 1677
+    "n_rows_in_file": 1682
   }
 }
