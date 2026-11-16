@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-11-13T14:38:44+00:00",
+  "generated_at": "2026-11-16T11:55:44+00:00",
   "current_series": {
     "source": "Banque Centrale du Congo",
-    "observations": 1686,
+    "observations": 1687,
     "start": "2017-01-02",
     "last_observation": {
-      "date": "2026-11-13",
-      "value": 2260.96
+      "date": "2026-11-16",
+      "value": 2265.59
     }
   },
   "technical_snapshot": {
-    "ema_20": 2262.8205254018385,
-    "ema_50": 2263.6252454424216,
-    "ema_gap_20_50": -0.0003555005592039695,
-    "rsi_14": 47.441507445356464,
-    "momentum_10_pct": -0.02653035957480565,
-    "momentum_20_pct": -0.20039726329728058,
-    "macd": -0.9488319108231735,
-    "macd_hist": -0.03551394876519931,
-    "volatility_20_pct": 0.18257368907938734,
-    "range_position_20": 0.36572890025575083,
+    "ema_20": 2263.0842848873776,
+    "ema_50": 2263.7022946407583,
+    "ema_gap_20_50": -0.0002730084052323667,
+    "rsi_14": 52.43516256762035,
+    "momentum_10_pct": 0.018983206484324278,
+    "momentum_20_pct": 0.14454188620531827,
+    "macd": -0.6097930724572507,
+    "macd_hist": 0.24281991168057893,
+    "volatility_20_pct": 0.1858720268426169,
+    "range_position_20": 0.7604433077578908,
     "ema_signal": 0
   },
   "xgboost": {
-    "generated_at": "2026-11-09T11:59:33",
-    "trained_through": "2026-11-09",
-    "new_observations_since_training": 4,
+    "generated_at": "2026-11-16T11:55:17",
+    "trained_through": "2026-11-16",
+    "new_observations_since_training": 0,
     "last_observation": {
-      "date": "2026-11-09",
-      "value": 2256.67
+      "date": "2026-11-16",
+      "value": 2265.59
     },
     "selected_model": {
       "h5": "xgboost",
@@ -37,37 +37,37 @@
     },
     "metrics": {
       "h5": {
-        "walk_forward_ratio": 0.9932223332444059,
-        "test_ratio": 0.9931583151376563,
-        "mae_xgboost": 31.636015925539848,
-        "mae_naive": 31.853950617283964,
-        "rmse_xgboost": 56.58574504071907,
-        "rmse_naive": 54.985393200668284,
-        "directional_accuracy": 0.5371900826446281,
+        "walk_forward_ratio": 0.9888264293264697,
+        "test_ratio": 0.9805424276741708,
+        "mae_xgboost": 27.42239606418081,
+        "mae_naive": 27.966557377049195,
+        "rmse_xgboost": 45.85256904810714,
+        "rmse_naive": 45.77218088121814,
+        "directional_accuracy": 0.551440329218107,
         "selected_model": "xgboost",
         "verdict": "Amélioration par rapport à la naïve, mais NON significative statistiquement.",
         "test_period": null
       },
       "h10": {
-        "walk_forward_ratio": 1.0006476565676565,
-        "test_ratio": 1.0498011617986513,
-        "mae_xgboost": 37.452670960894665,
-        "mae_naive": 35.67596638655461,
-        "rmse_xgboost": 66.16402605377907,
-        "rmse_naive": 62.550902639437616,
-        "directional_accuracy": 0.5358649789029536,
+        "walk_forward_ratio": 0.9896870118353893,
+        "test_ratio": 1.035922375029923,
+        "mae_xgboost": 31.396596641503123,
+        "mae_naive": 30.3078661087866,
+        "rmse_xgboost": 47.3447974218939,
+        "rmse_naive": 46.36198318146915,
+        "directional_accuracy": 0.5504201680672269,
         "selected_model": "naive",
-        "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve.",
+        "verdict": "Résultats contradictoires (walk-forward et test final divergent) : pas d'amélioration démontrée. Le modèle déployé pour cet horizon est la prévision naïve.",
         "test_period": null
       },
       "h20": {
-        "walk_forward_ratio": 1.1713057941092153,
-        "test_ratio": 1.1279481617696154,
-        "mae_xgboost": 47.5570154277902,
-        "mae_naive": 42.16241228070175,
-        "rmse_xgboost": 73.77091725203782,
-        "rmse_naive": 65.7923107975979,
-        "directional_accuracy": 0.5350877192982456,
+        "walk_forward_ratio": 1.1491598411552417,
+        "test_ratio": 1.1074931719026344,
+        "mae_xgboost": 40.98856410285271,
+        "mae_naive": 37.010218340611345,
+        "rmse_xgboost": 60.807829567334636,
+        "rmse_naive": 53.22591959779151,
+        "directional_accuracy": 0.5414847161572053,
         "selected_model": "naive",
         "verdict": "XGBoost n'apporte pas d'amélioration par rapport à la prévision naïve. Le modèle déployé pour cet horizon est la prévision naïve.",
         "test_period": null
@@ -77,117 +77,117 @@
       "h5": [
         {
           "feature": "rolling_std_30",
-          "perm_importance_mae_cdf": 0.398296160739957,
+          "perm_importance_mae_cdf": 0.377801737803977,
           "perm_rank": 1
         },
         {
           "feature": "rolling_mean_3_rel",
-          "perm_importance_mae_cdf": 0.3138385264105679,
+          "perm_importance_mae_cdf": 0.2789316215667565,
           "perm_rank": 2
         },
         {
           "feature": "lag_2_rel",
-          "perm_importance_mae_cdf": 0.1909848217364285,
+          "perm_importance_mae_cdf": 0.1784460174044405,
           "perm_rank": 3
         },
         {
-          "feature": "rolling_mean_5_rel",
-          "perm_importance_mae_cdf": 0.1703001853942232,
+          "feature": "lag_1_rel",
+          "perm_importance_mae_cdf": 0.1554111699265878,
           "perm_rank": 4
         },
         {
-          "feature": "lag_1_rel",
-          "perm_importance_mae_cdf": 0.1127595348377425,
+          "feature": "rolling_std_10",
+          "perm_importance_mae_cdf": 0.1484640247985286,
           "perm_rank": 5
         },
         {
-          "feature": "rolling_mean_20_rel",
-          "perm_importance_mae_cdf": 0.0974916150114356,
+          "feature": "rolling_mean_5_rel",
+          "perm_importance_mae_cdf": 0.1050581553890484,
           "perm_rank": 6
         }
       ],
       "h10": [
         {
-          "feature": "rolling_std_30",
-          "perm_importance_mae_cdf": 0.693455462982022,
+          "feature": "rolling_std_20",
+          "perm_importance_mae_cdf": 0.6171364819700035,
           "perm_rank": 1
         },
         {
-          "feature": "rolling_std_20",
-          "perm_importance_mae_cdf": 0.4743240618306046,
+          "feature": "rolling_std_30",
+          "perm_importance_mae_cdf": 0.5375784247924471,
           "perm_rank": 2
         },
         {
           "feature": "rolling_mean_5_rel",
-          "perm_importance_mae_cdf": 0.2727597168793174,
+          "perm_importance_mae_cdf": 0.2477229931254257,
           "perm_rank": 3
         },
         {
-          "feature": "rolling_mean_3_rel",
-          "perm_importance_mae_cdf": 0.2419926783295004,
+          "feature": "rolling_mean_30_rel",
+          "perm_importance_mae_cdf": 0.2277842156480698,
           "perm_rank": 4
         },
         {
           "feature": "rolling_mean_10_rel",
-          "perm_importance_mae_cdf": 0.1703459170818312,
+          "perm_importance_mae_cdf": 0.2165380264957949,
           "perm_rank": 5
         },
         {
           "feature": "lag_1_rel",
-          "perm_importance_mae_cdf": 0.0988475922228531,
+          "perm_importance_mae_cdf": 0.2001529006427851,
           "perm_rank": 6
         }
       ],
       "h20": [
         {
           "feature": "rolling_std_30",
-          "perm_importance_mae_cdf": 1.7109387480903813,
+          "perm_importance_mae_cdf": 1.5460228786540668,
           "perm_rank": 1
         },
         {
-          "feature": "rolling_mean_20_rel",
-          "perm_importance_mae_cdf": 0.6533599675622745,
+          "feature": "rolling_mean_10_rel",
+          "perm_importance_mae_cdf": 1.2056539312283463,
           "perm_rank": 2
         },
         {
-          "feature": "rolling_mean_10_rel",
-          "perm_importance_mae_cdf": 0.3215519831803917,
+          "feature": "rolling_mean_3_rel",
+          "perm_importance_mae_cdf": 0.37713011581071,
           "perm_rank": 3
         },
         {
-          "feature": "rolling_mean_3_rel",
-          "perm_importance_mae_cdf": 0.1680741128822603,
+          "feature": "rolling_mean_30_rel",
+          "perm_importance_mae_cdf": 0.3003407364464955,
           "perm_rank": 4
         },
         {
-          "feature": "rolling_mean_30_rel",
-          "perm_importance_mae_cdf": 0.1194568473606672,
+          "feature": "rolling_mean_20_rel",
+          "perm_importance_mae_cdf": 0.2768681227473223,
           "perm_rank": 5
         },
         {
-          "feature": "variation_1",
-          "perm_importance_mae_cdf": 0.103520761469862,
+          "feature": "rolling_mean_5_rel",
+          "perm_importance_mae_cdf": 0.2094967139436526,
           "perm_rank": 6
         }
       ]
     }
   },
   "strategy": {
-    "generated_at": "2026-11-09T12:00:03",
-    "trained_through": "2026-11-09",
-    "new_observations_since_training": 4,
+    "generated_at": "2026-11-16T11:55:43",
+    "trained_through": "2026-11-16",
+    "new_observations_since_training": 0,
     "summary": {
       "h5": {
         "strategy": "ma",
         "params": {
           "fast": 20,
-          "slow": 30,
-          "neutral_band": 0.003
+          "slow": 50,
+          "neutral_band": 0.005
         },
-        "wf_ratio": 0.960306774215518,
-        "test_ratio": 1.0130427581856036,
-        "directional_accuracy": 0.52,
-        "signal_coverage": 0.32628398791540786,
+        "wf_ratio": 0.9637696469463912,
+        "test_ratio": 1.0022881151524676,
+        "directional_accuracy": 0.508695652173913,
+        "signal_coverage": 0.3855421686746988,
         "selected_model": "naive"
       },
       "h10": {
@@ -195,12 +195,12 @@
         "params": {
           "fast": 20,
           "slow": 50,
-          "neutral_band": 0.003
+          "neutral_band": 0.005
         },
-        "wf_ratio": 0.9279959800702086,
-        "test_ratio": 1.0065538246712582,
-        "directional_accuracy": 0.5253456221198156,
-        "signal_coverage": 0.4233128834355828,
+        "wf_ratio": 0.935087634564966,
+        "test_ratio": 1.0111916228692506,
+        "directional_accuracy": 0.5244444444444445,
+        "signal_coverage": 0.39143730886850153,
         "selected_model": "naive"
       },
       "h20": {
@@ -210,36 +210,36 @@
           "slow": 50,
           "neutral_band": 0.003
         },
-        "wf_ratio": 0.9208828089777664,
-        "test_ratio": 1.0160950182664519,
-        "directional_accuracy": 0.5169082125603864,
-        "signal_coverage": 0.43670886075949367,
+        "wf_ratio": 0.9018785102758652,
+        "test_ratio": 1.0176112342800494,
+        "directional_accuracy": 0.5048076923076923,
+        "signal_coverage": 0.4353312302839117,
         "selected_model": "naive"
       }
     },
     "forecast": {
       "h5": {
-        "value": 2256.67,
-        "lower": 2251.9170998543395,
-        "upper": 2268.829602784828,
+        "value": 2265.59,
+        "lower": 2261.0747336981394,
+        "upper": 2279.175716537818,
         "signal": 0,
         "strategy": "ma",
         "model_used": "naive",
         "expected_return": 0.0
       },
       "h10": {
-        "value": 2256.67,
-        "lower": 2250.6890513092235,
-        "upper": 2274.734384920488,
+        "value": 2265.59,
+        "lower": 2259.6293042779216,
+        "upper": 2290.172942704167,
         "signal": 0,
         "strategy": "ma",
         "model_used": "naive",
         "expected_return": 0.0
       },
       "h20": {
-        "value": 2256.67,
-        "lower": 2250.1759559368925,
-        "upper": 2281.139001983279,
+        "value": 2265.59,
+        "lower": 2259.0224878150484,
+        "upper": 2290.092119302746,
         "signal": 0,
         "strategy": "ma",
         "model_used": "naive",
