@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:55:17",
+  "generated_at": "2026-11-23T13:30:40",
   "feature_set": "scale_free",
   "feature_names": [
     "lag_1_rel",
@@ -34,18 +34,18 @@
     "quarter",
     "days_since_previous_observation"
   ],
-  "trained_through": "2026-11-16",
+  "trained_through": "2026-11-23",
   "horizons": {
     "h5": {
       "selected_model": "xgboost",
       "best_params": {
-        "n_estimators": 200,
-        "max_depth": 4,
-        "learning_rate": 0.02,
+        "n_estimators": 500,
+        "max_depth": 3,
+        "learning_rate": 0.05,
         "subsample": 0.6,
-        "colsample_bytree": 1.0,
+        "colsample_bytree": 0.9,
         "min_child_weight": 50,
-        "reg_alpha": 0.1,
+        "reg_alpha": 0.0,
         "reg_lambda": 1.0,
         "objective": "reg:absoluteerror"
       },
@@ -54,16 +54,16 @@
         "xgboost": {
           "n_calibration": 994,
           "level_nominal": 0.9,
-          "q_abs": 0.025116592677811633,
-          "sigma_floor": 0.0009370005717795615,
-          "q_norm": 1.3339287302126832
+          "q_abs": 0.024047070319160757,
+          "sigma_floor": 0.0009450675124531298,
+          "q_norm": 1.3245814960511826
         },
         "naive": {
           "n_calibration": 994,
           "level_nominal": 0.9,
-          "q_abs": 0.024629950715270077,
-          "sigma_floor": 0.0009370005717795615,
-          "q_norm": 1.319665369979438
+          "q_abs": 0.024863909221700564,
+          "sigma_floor": 0.0009450675124531298,
+          "q_norm": 1.299430405075105
         }
       }
     },
@@ -85,16 +85,16 @@
         "xgboost": {
           "n_calibration": 989,
           "level_nominal": 0.9,
-          "q_abs": 0.02884063876291154,
-          "sigma_floor": 0.001299945717525986,
-          "q_norm": 1.4048410293087186
+          "q_abs": 0.02830924472828744,
+          "sigma_floor": 0.0013236788568524848,
+          "q_norm": 1.449354124573287
         },
         "naive": {
           "n_calibration": 989,
           "level_nominal": 0.9,
-          "q_abs": 0.029281593126736505,
-          "sigma_floor": 0.001299945717525986,
-          "q_norm": 1.3913773814142216
+          "q_abs": 0.02944976802670951,
+          "sigma_floor": 0.0013236788568524848,
+          "q_norm": 1.3661238684444648
         }
       }
     },
@@ -116,16 +116,16 @@
         "xgboost": {
           "n_calibration": 979,
           "level_nominal": 0.9,
-          "q_abs": 0.039174891149506896,
+          "q_abs": 0.03632026414568257,
           "sigma_floor": 0.0018315833761126227,
-          "q_norm": 1.858385431926039
+          "q_norm": 1.7327578338672978
         },
         "naive": {
           "n_calibration": 979,
           "level_nominal": 0.9,
-          "q_abs": 0.038372014572932045,
+          "q_abs": 0.038665739728029225,
           "sigma_floor": 0.0018315833761126227,
-          "q_norm": 1.5656051305848022
+          "q_norm": 1.5878066939521396
         }
       }
     }
